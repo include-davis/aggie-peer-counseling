@@ -1,6 +1,6 @@
 ### 📖 **README Snippet** (Dev Setup Instructions)
 
-```md
+
 ## 🧑‍💻 Local Development Setup
 
 ### Prerequisites
@@ -10,18 +10,18 @@
 
 ### Getting Started
 1. Clone the repo:
-   ```bash
+   ```
    git clone https://github.com/your-org/aggie-fiction.git
    cd aggie-fiction
    ```
 
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 
 3. Start the dev server:
-   ```bash
+   ```
    npm run dev
    ```
 
@@ -32,7 +32,7 @@
 ### 🧼 Best Practices
 
 - Always pull the latest changes from `main` before starting:
-  ```bash
+  ```
   git pull origin main
   ```
 

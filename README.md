@@ -49,6 +49,3 @@
 ### 🎨 Figma Design
 
 Refer to the Figma link pinned in Slack to stay aligned with design colors, fonts, and layout.
-```
-
-Let me know if you want me to help create `.nvmrc`, `.eslintrc`, or even VSCode settings to keep the dev environment consistent across teammates!

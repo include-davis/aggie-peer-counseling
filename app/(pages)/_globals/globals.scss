@@ -1,6 +1,5 @@
 @use './mixins.scss';
 
-// ===== 🎨 COLORS =====
 :root {
   // Common Colors
   --white: #FFFFFF;
@@ -38,7 +37,6 @@
   --aggie-gradient: linear-gradient(200deg, #04164F 7.1%, #3D1069 62.03%, #750B83 94.99%);
 }
 
-// ===== 🧑‍🎨 BASE RESET =====
 * {
   box-sizing: border-box;
   padding: 0;
@@ -51,7 +49,6 @@ body {
   color: var(--black);
 }
 
-// ===== ✍️ TYPOGRAPHY =====
 h1 {
   @include mixins.fontStyle(4rem, 700, normal, 'JejuMyeongjo');
 }

@@ -1,3 +1,4 @@
+to check the box: `[x]` 
 ## 🛠️ What this PR does:
 - [ ] Implements the [Feature Name] component/section
 - [ ] Uses correct SCSS variables, mixins, and font styles

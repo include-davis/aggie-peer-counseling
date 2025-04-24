@@ -1,42 +1,65 @@
-@use "./mixins.scss";
+@use './mixins.scss';
 
+// ===== 🎨 COLORS =====
 :root {
-    // primary colors
-    --white: #FAFAFA;
-    --Aggie-Space: linear-gradient(200deg, #04164F 7.1%, #3D1069 62.03%, #750B83 94.99%);
+  // Common Colors
+  --white: #FFFFFF;
+  --black: #222;
 
-    // secondary colors
-    --gold: #E4A135;
-    --light-purple: #CFBAE8;
-    --dark-purple: #161457;
+  // Homepage / Day Theme
+  --day-cream: #F0EEE8;
+  --day-blush: #F1C8D0;
+  --day-olive: #81916E;
+  --day-sky: #B1D2EF;
+  --day-mint: #C0D6BB;
+  --day-cloud: #C9E9FF;
+  --day-rose: #E2A7AF;
+  --day-sun: #FFF2C9;
 
-    // accent
-    --black: #222;
+  // Resources Page / Sunset Theme
+  --sunset-forest: #678B64;
+  --sunset-herb: #80A177;
+  --sunset-rosewood: #A8747B;
+  --sunset-mint: #C0D6BB;
+  --sunset-sand: #FEE5BE;
+  --sunset-peach: #FFD5A5;
+  --sunset-honey: #FFE7C0;
+
+  // De-Stress / Night Theme
+  --night-ocean: #4E6F98;
+  --night-fog: #6F8EBC;
+  --night-deep: #1E3666;
+  --night-lavender: #BBCEDF;
+  --night-moon: #F4DA9D;
+  --night-candle: #DDB087;
+  --night-dream: #B8B7E8;
+
+  // Brand Gradient
+  --aggie-gradient: linear-gradient(200deg, #04164F 7.1%, #3D1069 62.03%, #750B83 94.99%);
 }
 
+// ===== 🧑‍🎨 BASE RESET =====
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: var(--white);
-    font-family: var(--font1);
-    color: var(--black);
+  background-color: var(--white);
+  font-family: 'JejuMyeongjo', serif;
+  color: var(--black);
 }
 
-// Heading
+// ===== ✍️ TYPOGRAPHY =====
 h1 {
-    @include mixins.fontStyle(4rem, 700, auto, var(--font1));
+  @include mixins.fontStyle(4rem, 700, normal, 'JejuMyeongjo');
 }
 
-// Heading 2
 h2 {
-    @include mixins.fontStyle(2rem, 700, auto, var(--font1));
+  @include mixins.fontStyle(2rem, 700, normal, 'Jua');
 }
 
-// Body
 p {
-    @include mixins.fontStyle(1rem, 400, auto, var(--font1));
+  @include mixins.fontStyle(1rem, 400, 1.5, 'Jua');
 }

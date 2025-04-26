@@ -1,3 +1,15 @@
+@import url(https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo);
+
+@font-face {
+    font-family: "JejuMyeongjo";
+    src: url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.eot");
+    src: url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.svg#JejuMyeongjo")format("svg");
+}
+
 .background {
     position: fixed; /* Makes the background cover the entire viewport */
     top: 0;
@@ -15,7 +27,10 @@
     justify-content: center;
     color: white; /* Optional: Adjust text color for visibility */
 }
-.title{
-    font-size: 50;
-    font-family: 'JejuMyeongjo';
+.title {
+    font-size: 50px; /* Ensure font size has a unit */
+    font-family: 'JejuMyeongjo', Times, serif; /* Correct font-family name */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;;
 }

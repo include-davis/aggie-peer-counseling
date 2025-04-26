@@ -10,24 +10,34 @@ const Navbar = () => {
     const routeStyles = {
         "/home" :styles["navbar-morning"],
         "/resources" : styles["navbar-noon"],
-        "/destress" : ["navbar-night"],
-        "/contact" : ["navbar-contact"],
+        "/destress" : styles["navbar-night"],
+        "/contact" : styles["navbar-contact"],
     }
     const colorClass = routeStyles[pathanme] || "";
 
 return (
-    <nav className={`${styles.navbar} navbar ${colorClass}`}>
-         <div className={styles["nav-logo"]}>
-               <img src="/logo.svg" alt="Logo" />
+    <nav className={`${styles.navbar} ${colorClass}`}>
+            <div className={styles["nav-logo"]}>
+                <img src="images/logo.svg" alt="Logo" />
             </div>
-        <ul className="nav-links">
-            <li className="nav-link"><Link href="/home">Home</Link></li>
-            <li><a href="#program">Program</a></li>
-            <li className="nav-link"><Link href="/resources">Resources</Link></li>
-            <li className="nav-link"><Link href="/destress">Destress</Link></li>
-            <li className="nav-link"><Link href="/contact">Contact</Link></li>
-        </ul>
-    </nav>
+            <ul className={styles["nav-links"]}>
+                <li className={styles["nav-link"]}>
+                    <Link href="/">About Us</Link>
+                </li>
+                <li className={styles["nav-link"]}>
+                    <a href="#program">Program</a>
+                </li>
+                <li className={styles["nav-link"]}>
+                    <Link href="/resources">Resources</Link>
+                </li>
+                <li className={styles["nav-link"]}>
+                    <Link href="/destress">Destress</Link>
+                </li>
+                <li className={styles["nav-link"]}>
+                    <Link href="/contact">Contact</Link>
+                </li>
+            </ul>
+        </nav>
 );
 }
 

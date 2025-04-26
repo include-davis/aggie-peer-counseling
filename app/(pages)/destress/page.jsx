@@ -1,10 +1,18 @@
 import styles from "./page.module.scss";
+import Hero from "../_components/common/Hero/Hero";
 
 export default function Home() {
   return (
+    <>
+     <Hero
+        backgroundImage="/images/home-hero.jpg"
+        title="De-Stress with Us"
+        subtitle="Breath, relax, reset"
+      />
     <main className={styles.page}>
-      <h1>header 1</h1>
-      <p>body</p>
+      <h1>destress</h1>
+      <p></p>
     </main>
+    </>
   );
 }

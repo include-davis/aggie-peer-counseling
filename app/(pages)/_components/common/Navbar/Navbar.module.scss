@@ -1,0 +1,59 @@
+ // Import global styles
+.navbar {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent; 
+    z-index: 10; 
+}
+
+
+.nav-logo {
+        width: 101.924px;
+            height: 89px;
+            flex-shrink: 0;
+            aspect-ratio: 101.92/89.00;
+    }
+
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    .nav-link {
+        a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            color: var(--black); // Default color (can be overwritten)
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+/* Styles based on the route */
+.navbar-morning .nav-link a {
+    color:var(--black); // White on morning page
+}
+
+.navbar-noon .nav-link a {
+    color: var(--black); // Black on noon page
+}
+
+.navbar-night .nav-link a {
+    color: var(--black); // Light gray on night page
+}
+
+.navbar-contact .nav-link a {
+    color: var(--black); // Custom for contact page
+}

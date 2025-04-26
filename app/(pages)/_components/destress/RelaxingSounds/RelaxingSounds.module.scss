@@ -37,17 +37,22 @@
     margin-bottom: 98px;
 }
 .musicCardContainer {
-    width: 281px;
-    height: 387px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 55px;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
 }
 .scrollButtons{
     width: 54px;
     height: 54px;
     flex-shrink: 0;
+}
+.cardsTrack{
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: calc((281px * 3) + (55px * 2)); /* 3 cards + 2 gaps */
+    gap: 55px;
+    
 }

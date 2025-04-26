@@ -21,6 +21,13 @@ function RelaxingSounds() {
                     imagePath = "ocean"
                     altText = "ocean sound"
                     />
+                <Image
+                    src="/images/destress_relaxing_sounds/rightScroll.svg"
+                    alt="scroll right"
+                    width={281}
+                    height={387}
+                    className={styles.scrollButtons}
+                />
             </div>
         </div>
     )

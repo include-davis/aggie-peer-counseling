@@ -32,9 +32,13 @@
     font-family: 'JejuMyeongjo', Times, serif; /* Correct font-family name */
     font-style: normal;
     font-weight: 400;
-    line-height: normal;;
+    line-height: normal;
+    margin-top: 109px;
+    margin-bottom: 98px;
 }
 .musicCardContainer {
+    width: 281px;
+    height: 387px;
     display: flex;
     flex-direction: row;
     align-items: center;

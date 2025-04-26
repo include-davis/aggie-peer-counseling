@@ -8,7 +8,7 @@ function RelaxingSounds() {
             <div>
                 <h1 className={styles.title}>Relaxing Sounds</h1>
             </div>
-            <div>
+            <div className={styles.musicCardContainer}>
                 <MusicCard 
                     imagePath = "rain"
                     altText = "Rain sound"

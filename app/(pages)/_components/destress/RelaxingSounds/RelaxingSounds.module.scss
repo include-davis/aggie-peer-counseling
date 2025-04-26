@@ -1,0 +1,21 @@
+.background {
+    position: fixed; /* Makes the background cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url("/images/destress_relaxing_sounds/Music_Section.svg");
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    z-index: -1; /* Places the background behind other content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Optional: Adjust text color for visibility */
+}
+.title{
+    font-size: 50;
+    font-family: 'JejuMyeongjo';
+}

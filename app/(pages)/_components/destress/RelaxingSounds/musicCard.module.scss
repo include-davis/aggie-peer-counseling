@@ -1,0 +1,18 @@
+.cardContainer {
+    position: relative; /* Ensures the overlay is positioned relative to the larger image */
+    width: 281px; /* Match the width of the larger image */
+    height: 400px; /* Match the height of the larger image */
+}
+
+.largeImage {
+    width: 281px; /* Ensure the larger image fills the container */
+    height: 387px;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.overlayImage {
+    position: absolute; /* Position the smaller image on top of the larger image */
+    bottom: 55px; /* Adjust position as needed */
+    right: 120px; /* Adjust position as needed */
+    z-index: 1; /* Ensure it appears above the larger image */
+}

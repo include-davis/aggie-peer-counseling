@@ -9,6 +9,8 @@ export default function RelaxingSounds({ imagePath, altText }) {
             width={281}
             height={387}
             />
+
+            
         </div>
     )
 }

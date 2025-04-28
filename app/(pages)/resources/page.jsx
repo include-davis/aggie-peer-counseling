@@ -7,7 +7,7 @@ export default function Home() {
     <Hero
         backgroundImage="/images/noon.png"
         title="Resources"
-        subtitle="support made just for you"
+        subtitle="Support made just for you"
       />
     <main className={styles.page}>
       <h1>resources</h1>

@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <>
     <Hero
-        backgroundImage="/images/home-hero.jpg"
-        title="Resources"
-        subtitle="Support made just for you"
+        backgroundImage="/images/noon.png"
+        title=""
+        subtitle=""
       />
     <main className={styles.page}>
       <h1>resources</h1>

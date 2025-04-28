@@ -12,14 +12,14 @@ function RelaxingSounds() {
         if(containerRef.current){
             const container = containerRef.current;
             const cardWidth = container.firstChild.offsetWidth;
-            container.scrollBy({ left: cardWidth * 3, behavior: "smooth" });
+            container.scrollBy({ left: cardWidth * 4, behavior: "smooth" });
         }
     }
     const scrollPrev = () => {
         if (containerRef.current) {
             const container = containerRef.current;
             const cardWidth = container.firstChild.offsetWidth;
-            container.scrollBy({ left: -cardWidth * 3, behavior: "smooth" });
+            container.scrollBy({ left: -cardWidth * 4, behavior: "smooth" });
         }
     };
     return (

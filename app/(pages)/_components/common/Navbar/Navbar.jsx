@@ -31,9 +31,9 @@ return (
                     <Link href="/resources">Resources</Link>
                 </li>
                 <li className={styles["nav-link"]}>
-                    <Link href="/destress">Destress</Link>
+                    <Link href="/destress">De-stress</Link>
                 </li>
-                <li className={styles["nav-link"]}>
+                <li className={`${styles["nav-link"]} ${styles["nav-contact"]}`}>
                     <Link href="/contact">Contact</Link>
                 </li>
             </ul>

@@ -6,23 +6,31 @@
     background-repeat: no-repeat;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start; 
     justify-content: center;
     text-align: center;
+    padding-top: 155px; 
 }
 
 .content {
-    color: var(--black);
+    color: var(--white);
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.3rem; 
 
     h1 {
-        font-size: 4rem;
-        font-family: 'JejuMyeongjo', serif;
+        color: var(--white);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--white);
+        font-style: normal;
+    
     }
 
     p {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-        font-family: 'Jua', sans-serif;
+        color: var(--white);
+        font-style: normal;
+        
     }
 }

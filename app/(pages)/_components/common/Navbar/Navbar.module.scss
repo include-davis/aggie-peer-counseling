@@ -1,4 +1,5 @@
  // Import global styles
+ 
 .navbar {
     position: absolute; 
     top: 0;
@@ -15,10 +16,27 @@
 
 .nav-logo {
         width: 101.924px;
-            height: 89px;
-            flex-shrink: 0;
-            aspect-ratio: 101.92/89.00;
+        height: 89px;
+        flex-shrink: 0;
+        aspect-ratio: 101.92/89.00;
     }
+.nav-contact {
+    a {
+        width: 118px;
+        height: 49px;
+        flex-shrink: 0;
+        padding: 0.5rem 1.5rem;
+        border: none; 
+        border-radius: 999px; 
+        background: var(--day-sun); 
+        transition: all 0.3s ease; 
+    }
+
+    a:hover {
+        background-color: var(--day-sun); // or your primary color
+        color: var(--white); // text flips color on hover
+    }
+}
 
 
 .nav-links {
@@ -28,14 +46,22 @@
 
     .nav-link {
         a {
+            width: 134.662px;
+            height: 36.619px;
+            flex-shrink: 0;
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
             transition: color 0.3s ease;
-            color: var(--black); // Default color (can be overwritten)
+            color: var(--black);
+            color: #000;
+            font-family: JejuMyeongjo;
+            font-size: 23.625px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
 
             &:hover {
                 opacity: 0.7;
+                
             }
         }
     }
@@ -43,17 +69,17 @@
 
 /* Styles based on the route */
 .navbar-morning .nav-link a {
-    color:var(--black); // White on morning page
+    color:var(--black); 
 }
 
 .navbar-noon .nav-link a {
-    color: var(--black); // Black on noon page
+    color: var(--black); 
 }
 
 .navbar-night .nav-link a {
-    color: var(--black); // Light gray on night page
+    color: var(--black); 
 }
 
 .navbar-contact .nav-link a {
-    color: var(--black); // Custom for contact page
+    color: var(--black); 
 }

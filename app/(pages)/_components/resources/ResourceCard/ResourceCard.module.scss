@@ -1,0 +1,74 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+.card {
+    background-color: var(--sunset-sand);
+    border: 0.063rem, solid;
+    border-radius: 1.875rem;
+    @include mixins.fontStyle(2rem, 400, normal, 'JejuMyeongjo');
+    width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    padding: 3.12rem 0;
+    gap: 1.81rem;
+}
+
+.dropdownButton {
+    width: 31.3125rem;
+    height: 8.625rem;
+    background-color: var(--sunset-peach);
+    border: 0.063rem, solid;
+    border-radius: 1.25rem;
+    border-color: #F6992F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+    gap: 0.44rem;
+    cursor: pointer;
+    transition: height 0.25s ease;
+}
+
+.dropdownButton.open {
+    height: 20rem; //placeholder 
+}
+
+.boxAndSVG {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2.12rem;
+
+}
+
+.dropdownButtonBox {
+    width: 24rem;
+    height: 4.313rem;
+    border-radius: 1.25rem;
+    background-color: var(--sunset-honey);
+    @include mixins.fontStyle(1.5rem, 400, normal, 'Jua');
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+}
+
+.dropdownSVG {
+    height: 3.875rem;
+    width: 3.875rem;
+    position: relative;
+    top: 0.26rem;
+    user-select: none;
+    transition: transform .25s ease;
+}
+
+.dropdownSVG.rotated {
+    transform: rotate(180deg); 
+}
+
+.expandedText {
+    width: 27rem; //placeholder 
+    text-align: left;
+    padding-bottom: 1rem; //placeholder 
+}

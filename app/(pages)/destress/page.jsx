@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
      <Hero
-        backgroundImage="/images/night.png"
+        backgroundImage="/images/night2.png"
         title="De-Stress with Us"
         subtitle="Breath, relax, reset"
       />

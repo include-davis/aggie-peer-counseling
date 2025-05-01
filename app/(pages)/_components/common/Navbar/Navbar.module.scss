@@ -28,7 +28,8 @@
         padding: 0.5rem 1.5rem;
         border: none; 
         border-radius: 999px; 
-        background: var(--day-sun); 
+        background: var(--day-sun);
+        color: var(--black); 
         transition: all 0.3s ease; 
     }
 
@@ -77,9 +78,14 @@
 }
 
 .navbar-night .nav-link a {
-    color: var(--black); 
+    color: var(--white); 
 }
 
 .navbar-contact .nav-link a {
     color: var(--black); 
+}
+
+.navbar-night .nav-contact a {
+    background-color: var(--night-moon);
+    color: var(--white);
 }

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <Hero
-        backgroundImage="/images/noon.png"
+        backgroundImage="/images/noon2.png"
         title="Resources"
         subtitle="Support made just for you"
       />

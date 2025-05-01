@@ -1,8 +1,9 @@
 import Image from "next/image";
 import styles from "./musicCard.module.scss";
 
-var audio = new Audio("/sound/dummy_mp3.mp3");
-export default function RelaxingSounds({ imagePath, altText }) {
+
+export default function MusicCard({ imagePath, altText }) {
+    var audio = new Audio("/sound/dummy_mp3.mp3");
     return (
         <div className={styles.cardContainer}>
             <Image 

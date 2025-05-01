@@ -21,11 +21,13 @@ const testData = {
 
 function ButtonWithDropdown({ titleText, dropdownText, link }) {
     const [clicked, setClicked] = useState(false);
+    const [showText, setShowText] = useState(false);
     const dropdownRef = useRef();
     useEffect(() => {
         const handleBackgroundClick = (e) => {
             if (!dropdownRef.current.contains(e.target)) {
                 setClicked(false);
+                setShowText(false);
             }
         }
         document.addEventListener('mousedown', handleBackgroundClick);
@@ -36,21 +38,24 @@ function ButtonWithDropdown({ titleText, dropdownText, link }) {
     };
 
     return (
-        <div className={`${styles.dropdownButton} ${clicked ? styles.open : ''}`} ref={dropdownRef} onClick={() => setClicked(!clicked)}>
+        <div className={`${styles.dropdownButton} ${clicked ? styles.open : ''}`} ref={dropdownRef} onClick={() => { setClicked(!clicked); setTimeout(() => setShowText(true), 50) }/*added slight delay for smoother transition*/}> 
             <div className={styles.boxAndSVG}>
-                <div className={styles.dropdownButtonBox}>
+                <h1 className={styles.dropdownButtonBox}>
                     {titleText}
-                </div>
+                </h1>
                 <Image className={`${styles.dropdownSVG} ${clicked ? styles.rotated : ''}`} src='/images/gridicons:dropdown.svg' width={62} height={62} alt="gridicons:dropdown" draggable="false" />
             </div>
             {clicked && (
                 <div>
-                    <p className={styles.expandedText}>
-                        {dropdownText}
-                    </p>
-                    <p className={styles.expandedText}>
-                        Link: <a href={link} onClick={handleLinkClick}>{link}</a>
-                    </p>
+                    {showText && (
+                        <div>
+                            <p className={styles.expandedText}>
+                                {dropdownText}
+                            </p>
+                            <p className={styles.expandedText}>
+                                Link: <a href={link} onClick={handleLinkClick}>{link}</a>
+                            </p>
+                        </div> )}
                 </div>
             )}
         </div>
@@ -62,7 +67,7 @@ function Card({ data }) {
         <div className={styles.card}>
             {data.mainTitle}
             {data.buttons.map((buttonData, index) => (
-                <ButtonWithDropdown key={index} titleText={buttonData.heading} dropdownText={buttonData.text} link={buttonData.link}/>
+                <ButtonWithDropdown key={index} titleText={buttonData.heading} dropdownText={buttonData.text} link={buttonData.link} />
             ))}
         </div>
     )
@@ -75,3 +80,6 @@ export default function ResourceCard() {
         </div>
     )
 }
+
+
+//add text delay for smoother transiution   

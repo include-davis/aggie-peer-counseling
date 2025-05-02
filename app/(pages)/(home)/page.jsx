@@ -1,10 +1,13 @@
-import styles from "./page.module.scss";
+import ExerciseSection from "../_components/destress/ExerciseSection/ExerciseSection.jsx";
+import styles from "../_components/destress/ExerciseSection/ExerciseSection.module.scss";
+//import styles from "./page.module.scss";
 
 export default function Home() {
   return (
-    <main className={styles.page}>
-      <h1>header 1</h1>
-      <p>body</p>
+    <>
+    <main className={styles.pageContainer}>
+      <ExerciseSection />
     </main>
+    </>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./ResourceCard.module.scss";
 import { useState, useEffect, useRef } from 'react';
 
-function ButtonWithDropdown({ titleText, dropdownText}) {
+function ButtonWithDropdown({ titleText, dropdownText }) {
     const [clicked, setClicked] = useState(false);
     const [height, setHeight] = useState("8.625rem");
     const dropdownRef = useRef();
@@ -44,12 +44,12 @@ function ButtonWithDropdown({ titleText, dropdownText}) {
     )
 }
 
-export default function ResourceCard({data}) {
+export default function ResourceCard({ data }) {
     return (
         <div className={styles.card}>
             {data.mainTitle}
             {data.buttons.map((buttonData, index) => (
-                <ButtonWithDropdown key={index} titleText={buttonData.heading} dropdownText={buttonData.text}/>
+                <ButtonWithDropdown key={index} titleText={buttonData.heading} dropdownText={buttonData.text} />
             ))}
         </div>
     )

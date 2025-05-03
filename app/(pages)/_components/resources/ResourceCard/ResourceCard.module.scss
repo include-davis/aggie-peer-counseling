@@ -1,6 +1,13 @@
 @use '@/app/(pages)/_globals/mixins.scss';
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .card {
+    margin-bottom: 2.3rem;
+    break-inside: avoid;
     background-color: var(--sunset-sand);
     border: 0.063rem, solid;
     border-radius: 1.875rem;
@@ -17,7 +24,6 @@
 
 .dropdownButton {
     width: 31.3125rem;
-    height: 8.625rem;
     background-color: var(--sunset-peach);
     border: 0.063rem, solid;
     border-radius: 1.25rem;
@@ -28,18 +34,13 @@
     align-items: center;  
     gap: 0.44rem;
     cursor: pointer;
-    transition: height 0.25s ease;
-}
-
-.dropdownButton.open {
-    height: 20rem; //placeholder 
+    transition: height 0.5s ease;
 }
 
 .boxAndSVG {
     display: flex;
     flex-direction: row;
-    padding-top: 2.12rem;
-
+    padding: 2.16rem 0;
 }
 
 .dropdownButtonBox {
@@ -52,6 +53,10 @@
     justify-content: center;
     align-items: center;  
     text-align: center;
+}
+
+.dropdownButtonBoxText {
+    padding: 0 1.45rem;
 }
 
 .dropdownSVG {
@@ -68,7 +73,9 @@
 }
 
 .expandedText {
-    width: 27rem; //placeholder 
+    width: 28.3125rem; 
     text-align: left;
-    padding-bottom: 1rem; //placeholder 
+    @include mixins.fontStyle(1.25rem, 400, normal, 'Jua');
+    padding-bottom: 2.13rem;
+    animation: fadeIn 0.75s ease-in forwards;
 }

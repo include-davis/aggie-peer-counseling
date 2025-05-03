@@ -1,5 +1,26 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
 .page {
   h1 {
       color: var(--gold);
   }
 }
+
+.bullet {
+  padding-left: 1.75rem;
+  list-style-type: disc;
+}
+
+.link {
+  &:link, &:hover, &:visited, &:active {color: black;}
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 0 1.88rem;
+  @include mixins.phone {
+    flex-direction: column;
+  }
+} 

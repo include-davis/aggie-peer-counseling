@@ -227,8 +227,8 @@ export default function Home() {
     <main className={styles.page}>
       <h1>header 1</h1>
       <p>body</p>
-      <div className="row1">
-        <div className={styles.row1}>
+      <div className={styles.cardContainer}>
+        <div className="row1">
           <ResourceCard data={cards[0]} />
           <ResourceCard data={cards[1]} />
           <ResourceCard data={cards[2]} />

@@ -10,7 +10,16 @@ export default function MusicCard({ imagePath, altText }) {
         if (typeof window !== "undefined") {
             if (!audioRef.current) {
                 // Initialize the Audio object only once
-                audioRef.current = new Audio("/sound/dummy_mp3.mp3");
+                if (altText === "Rain sound") {
+                    audioRef.current = new Audio("/sound/rain.mp3");
+                }
+                if( altText === "piano sound") {
+                    audioRef.current = new Audio("/sound/piano.mp3");
+                }
+                if( altText === "ocean sound") {
+                    audioRef.current = new Audio("/sound/ocean.mp3");
+                }
+
             }
             audioRef.current.play();
         }

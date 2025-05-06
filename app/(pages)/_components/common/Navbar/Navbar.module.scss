@@ -1,16 +1,16 @@
  // Import global styles
  
 .navbar {
-    position: absolute; 
+    position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
     display: flex;
+    background: transparent !important;
+    border: none;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1rem;
-    background: transparent; 
-    z-index: 10; 
 }
 
 

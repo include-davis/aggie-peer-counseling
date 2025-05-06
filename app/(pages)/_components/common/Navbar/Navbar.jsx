@@ -5,21 +5,26 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-    const pathanme = usePathname();
+    const pathname = usePathname(); // ✅ you had this misspelled as pathanme earlier
 
     const routeStyles = {
-        "/home" :styles["navbar-morning"],
-        "/resources" : styles["navbar-noon"],
-        "/destress" : styles["navbar-night"],
-        "/contact" : styles["navbar-contact"],
-    }
-    const colorClass = routeStyles[pathanme] || "";
+        "/home": styles["navbar-morning"],
+        "/resources": styles["navbar-noon"],
+        "/destress": styles["navbar-night"],
+        "/contact": styles["navbar-contact"],
+    };
 
-return (
-    <nav className={`${styles.navbar} ${colorClass}`}>
+    const colorClass = routeStyles[pathname] || "";
+
+    return (
+        <nav className={`${styles.navbar} ${colorClass}`}>
             <div className={styles["nav-logo"]}>
-                <img src="images/logo.svg" alt="Logo" />
+                {/* ✅ Hide only the image, not the div to keep layout stable */}
+                {pathname !== "/contact" && (
+                    <img src="images/logo.svg" alt="Logo" />
+                )}
             </div>
+
             <ul className={styles["nav-links"]}>
                 <li className={styles["nav-link"]}>
                     <Link href="/">About Us</Link>
@@ -38,7 +43,7 @@ return (
                 </li>
             </ul>
         </nav>
-);
-}
+    );
+};
 
 export default Navbar;

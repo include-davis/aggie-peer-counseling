@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <Hero
-        backgroundImage="/images/contact.png"
+        backgroundImage="/images/contact2.png"
         title=""
         subtitle=""
       />

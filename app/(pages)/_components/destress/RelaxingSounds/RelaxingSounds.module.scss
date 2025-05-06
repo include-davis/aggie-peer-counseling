@@ -16,7 +16,7 @@
     left: 0;
     width: 100vw; /* Full width of the viewport */
     height: 100vh; /* Full height of the viewport */
-    background-image: url("/images/destress_relaxing_sounds/Music_Section.svg");
+    background-image: url("/images/destress_relaxing_sounds/Music_Section.png");
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -28,13 +28,13 @@
     color: white; /* Optional: Adjust text color for visibility */
 }
 .title {
-    font-size: 50px; /* Ensure font size has a unit */
+    font-size: 3.125rem; /* 50px / 16 = 3.125rem */
     font-family: 'JejuMyeongjo', Times, serif; /* Correct font-family name */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 109px;
-    margin-bottom: 98px;
+    margin-top: 6.8125rem; /* 109px / 16 = 6.8125rem */
+    margin-bottom: 6.125rem; /* 98px / 16 = 6.125rem */
     text-align: center;
 }
 .musicCardContainer {

@@ -1,28 +1,28 @@
 .cardContainer {
     position: relative; /* Ensures the overlay is positioned relative to the larger image */
-    width: 281px; /* Match the width of the larger image */
-    height: 400px; /* Match the height of the larger image */
+    width: 17.5625rem; /* 281px / 16 = 17.5625rem */
+    height: 25rem; /* 400px / 16 = 25rem */
 }
 
 .largeImage {
-    width: 281px; /* Ensure the larger image fills the container */
-    height: 387px;
+    width: 17.5625rem; /* 281px / 16 = 17.5625rem */
+    height: 24.1875rem; /* 387px / 16 = 24.1875rem */
     object-fit: cover; /* Maintain aspect ratio */
 }
 
 .overlayImage {
     position: absolute; /* Position the smaller image on top of the larger image */
-    bottom: 55px; /* Adjust position as needed */
-    right: 120px; /* Adjust position as needed */
+    bottom: 3.4375rem; /* 55px / 16 = 3.4375rem */
+    right: 7.5rem; /* 120px / 16 = 7.5rem */
     z-index: 1; /* Ensure it appears above the larger image */
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Add smooth animations */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Default shadow */
+    box-shadow: 0px 0.25rem 0.375rem rgba(0, 0, 0, 0.2); /* 4px / 16 = 0.25rem, 6px / 16 = 0.375rem */
     border-radius: 50%; /* Make the button circular */
 }
 
 .overlayImage:active {
     transform: scale(0.85); /* Scale down the button slightly when pressed */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Reduce shadow for a pressed effect */
+    box-shadow: 0px 0.125rem 0.25rem rgba(0, 0, 0, 0.4); /* 2px / 16 = 0.125rem, 4px / 16 = 0.25rem */
     background-color: rgba(255, 255, 255, 0.8); /* Add a lighter background color */
     filter: brightness(1.2); /* Slightly brighten the button */
 }

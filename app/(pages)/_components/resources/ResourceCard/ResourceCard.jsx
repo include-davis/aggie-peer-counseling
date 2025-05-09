@@ -33,7 +33,7 @@ function ButtonWithDropdown({ titleText, dropdownText }) {
                         {titleText}
                     </div>
                 </div>
-                <Image className={`${styles.dropdownSVG} ${clicked ? styles.rotated : ''}`} src='/images/gridicons:dropdown.svg' width={62} height={62} alt="gridicons:dropdown" draggable="false" />
+                <Image className={`${styles.dropdownSVG} ${clicked ? styles.rotated : ''}`} src='/images/dropdown.svg' width={62} height={62} alt="gridicons:dropdown" draggable="false" />
             </div>
             {clicked && (
                 <div className={styles.expandedText}>

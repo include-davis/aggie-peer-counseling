@@ -1,10 +1,11 @@
 import styles from "./page.module.scss";
+import Breathe from "../_components/destress/Breathe/Breathe";
 
 export default function Home() {
   return (
     <main className={styles.page}>
-      <h1>header 1</h1>
-      <p>body</p>
+
+      <Breathe />
     </main>
   );
 }

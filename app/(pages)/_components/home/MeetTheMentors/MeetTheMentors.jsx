@@ -33,7 +33,7 @@ export default function Mentors() {
 
       <div className={styles.mentorGrid}>
         {mentors.slice(0, 3).map((mentor) => (
-            <div className={styles.mentorCard}>
+            <div className={styles.mentorCard} key={mentor.name}>
             <Image
                 src={mentor.image}
                 alt={`${mentor.name}'s photo`}

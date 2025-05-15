@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-    const pathname = usePathname(); // ✅ you had this misspelled as pathanme earlier
+    const pathname = usePathname(); 
 
     const routeStyles = {
         "/home": styles["navbar-morning"],
@@ -19,9 +19,9 @@ const Navbar = () => {
     return (
         <nav className={`${styles.navbar} ${colorClass}`}>
             <div className={styles["nav-logo"]}>
-                {/* ✅ Hide only the image, not the div to keep layout stable */}
+                {}
                 {pathname !== "/contact" && (
-                    <img src="images/logo.svg" alt="Logo" />
+                    <img src="/images/logo.svg" alt="Logo" />
                 )}
             </div>
 

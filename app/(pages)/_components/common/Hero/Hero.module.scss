@@ -2,14 +2,14 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    margin-top: -110px; // pull hero up behind the navbar
-    padding-top: 200px; // prevent text from hiding behind navbar
+    margin-top: -6.875rem; // pull hero up behind the navbar
+    padding-top: 12.5rem; // prevent text from hiding behind navbar
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding-bottom: 220px;
+    padding-bottom: 13.75rem;
 }
 
  .bgImage {
@@ -18,13 +18,12 @@
      left: 0;
      width: auto;
      height: auto;
-     object-fit: fill;
-     z-index: 0;
+     //object-fit: fill;
  }
 
  .content {
      position: relative;
-     z-index: 1;
+     //z-index: 1;
      text-align: center;
      color: var(--white);
      padding: 2rem;

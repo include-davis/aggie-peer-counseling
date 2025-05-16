@@ -9,8 +9,8 @@ export default function Directory({whereToScroll, textData}) {
                 </div>
                 <div className={styles.body}>
                     {textData.map((card, index) => (
-                        <div className={styles.text} key={index} onClick={() => whereToScroll(index)}>
-                            {card.mainTitle}
+                        <div className={styles.text} key={index} onClick={() => whereToScroll(card.id)}>
+                            {card.id}
                         </div>
                     ))}
                     <div className={styles.accommodationsText}>

@@ -14,7 +14,7 @@ function Link({ link, text }) {
 
 const cards = [
   {
-    mainTitle: "On-Campus Resources",
+    id: "On-Campus Resources",
     buttons: [
       {
         heading: "Aggie Mental Health",
@@ -46,7 +46,7 @@ const cards = [
   },
 
   {
-    mainTitle: "Partner Units",
+    id: "Partner Units",
     buttons: [
       {
         heading: "Therapy Assistance Online (TAO)",
@@ -71,7 +71,7 @@ const cards = [
   },
 
   {
-    mainTitle: "24/7 Emergency Resources",
+    id: "24/7 Emergency Resources",
     buttons: [
       {
         heading: "Sutter Davis Emergency Room",
@@ -109,7 +109,7 @@ const cards = [
   },
 
   {
-    mainTitle: "Referring Mentees",
+    id: "Referring Mentees",
     buttons: [
       {
         heading: "Health 34",
@@ -140,7 +140,7 @@ const cards = [
   },
 
   {
-    mainTitle: "Important Additional Resources",
+    id: "Important Additional Resources",
     buttons: [
       {
         heading: "Center for Advocacy Resources and Education (CARE)",
@@ -183,7 +183,7 @@ const cards = [
   },
 
   {
-    mainTitle: "Academic Resources",
+    id: "Academic Resources",
     buttons: [
       {
         heading: "Academic Advising",
@@ -225,8 +225,6 @@ const cards = [
 //Link: <a className={styles.link} href="LINK" onClick={handleLinkClick}>LINK</a>
 
 export default function Home() {
-  const resourceCardRefs = useRef([]);  
-
   return (
     <main className={styles.page}>
       <h1>header 1</h1>
@@ -235,13 +233,15 @@ export default function Home() {
       <div className={styles.resourcesContainer}>
         <div className={styles.resourcesBody}>
 
-          <Directory textData={cards} whereToScroll={(index) => {resourceCardRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });}}/>
+          <Directory textData={cards} whereToScroll={(id) => {
+            const scrollTo = document.getElementById(id);
+            scrollTo.scrollIntoView({ behavior: 'smooth' });}}/>
 
           <div className={styles.cardContainer}>
             <div className={styles.column}>
               {cards.map((card, index) => (
                 index % 2 == 0 && 
-                <div key={index} ref={(thisRef) => resourceCardRefs.current[index] = thisRef}>
+                <div key={index} id={card.id}>
                   <ResourceCard data={card}/> 
                 </div>
               ))}
@@ -249,7 +249,7 @@ export default function Home() {
             <div className={styles.column}>
             {cards.map((card, index) => (
                 index % 2 == 1 && 
-                <div key={index} ref={(thisRef) => resourceCardRefs.current[index] = thisRef}>
+                <div key={index} id={card.id}>
                   <ResourceCard data={card}/> 
                 </div>
               ))}
@@ -259,7 +259,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{height: "50rem"}}>Hello</div>
+      <div style={{height: "20rem"}}>Hello</div>
     </main>
   );
 }

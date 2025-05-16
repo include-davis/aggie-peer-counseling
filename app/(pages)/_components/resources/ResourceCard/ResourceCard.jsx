@@ -47,7 +47,7 @@ function ButtonWithDropdown({ titleText, dropdownText }) {
 export default function ResourceCard({ data }) {
     return (
         <div className={styles.card}>
-            {data.mainTitle}
+            {data.id}
             {data.buttons.map((buttonData, index) => (
                 <ButtonWithDropdown key={index} titleText={buttonData.heading} dropdownText={buttonData.text} />
             ))}

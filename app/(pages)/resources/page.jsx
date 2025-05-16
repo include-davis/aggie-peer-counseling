@@ -1,6 +1,8 @@
 "use client";
 import styles from "./page.module.scss";
 import ResourceCard from "@/app/(pages)/_components/resources/ResourceCard/ResourceCard";
+import Directory from "@/app/(pages)/_components/resources/Directory/Directory";
+import { useRef } from "react";
 
 const handleLinkClick = (e) => {
   e.stopPropagation();
@@ -44,6 +46,31 @@ const cards = [
   },
 
   {
+    mainTitle: "Partner Units",
+    buttons: [
+      {
+        heading: "Therapy Assistance Online (TAO)",
+        text: (<> Free online resource available to all students with self-help modules and online counseling appointments
+          <ul className={styles.bullet}>
+            <li>
+              Sign up: use your UC Davis email and <Link link="https://shcs.ucdavis.edu/tao" text="follow the steps listed here" />
+            </li>
+          </ul>
+          <br />
+          Link: <Link link="https://www.taoconnect.org/" text="https://www.taoconnect.org/" />
+        </>)
+      },
+      {
+        heading: "BetterHelp.com",
+        text: (<> Licensed, trained, experienced, and accredited psychologists (PhD/PsyD), marriage and family therapists (LMFT), clinical social workers (LCSW/LMSW), and board licensed professional counselors (LPC) on an online platform for an affordable cost
+          <br /><br />
+          Link: <Link link="https://www.betterhelp.com/" text="https://www.betterhelp.com/" />
+        </>)
+      }
+    ]
+  },
+
+  {
     mainTitle: "24/7 Emergency Resources",
     buttons: [
       {
@@ -76,6 +103,37 @@ const cards = [
         heading: "Crisis Text Line",
         text: (<> Text: 741741 <br /><br />
           Link: <Link link="https://www.crisistextline.org/" text="https://www.crisistextline.org/" />
+        </>)
+      }
+    ]
+  },
+
+  {
+    mainTitle: "Referring Mentees",
+    buttons: [
+      {
+        heading: "Health 34",
+        text: (<> Team of healthcare educators and providers who deliver free, non-emergency support and service navigation for mental health and basic medical care to every segment of the UC Davis campus. <br />
+          Phone: 530-754-3434 <br /><br />
+          Link: <Link link="https://fire.ucdavis.edu/health34" text="https://fire.ucdavis.edu/health34" />
+        </>)
+      },
+      {
+        heading: "UC Davis Counseling (24/7 Mental Health Crisis Consultation)",
+        text: (<> Available after hours <br />
+          Phone: 530-752-0871 <br /> <br />
+          Link: <Link link="https://shcs.ucdavis.edu/crisis-care-and-urgent-help-resources" text="https://shcs.ucdavis.edu/crisis-care-and-urgent-help-resources" />
+        </>)
+      },
+      {
+        heading: "Aggie Compass Basic Needs Center",
+        text: (<> Financial, housing, and food insecurity resources
+          <ul className={styles.bullet}>
+            <li>
+              Referral link for student facing food or housing insecurity: <Link link="https://ucdavis-advocate.symplicity.com/collections/acbn-referral" text="https://ucdavis-advocate.symplicity.com/collections/acbn-referral" />
+            </li>
+          </ul> <br />
+          Link: <Link link="https://aggiecompass.ucdavis.edu" text="https://aggiecompass.ucdavis.edu" />
         </>)
       }
     ]
@@ -125,62 +183,6 @@ const cards = [
   },
 
   {
-    mainTitle: "Partner Units",
-    buttons: [
-      {
-        heading: "Therapy Assistance Online (TAO)",
-        text: (<> Free online resource available to all students with self-help modules and online counseling appointments
-          <ul className={styles.bullet}>
-            <li>
-              Sign up: use your UC Davis email and <Link link="https://shcs.ucdavis.edu/tao" text="follow the steps listed here" />
-            </li>
-          </ul>
-          <br />
-          Link: <Link link="https://www.taoconnect.org/" text="https://www.taoconnect.org/" />
-        </>)
-      },
-      {
-        heading: "BetterHelp.com",
-        text: (<> Licensed, trained, experienced, and accredited psychologists (PhD/PsyD), marriage and family therapists (LMFT), clinical social workers (LCSW/LMSW), and board licensed professional counselors (LPC) on an online platform for an affordable cost
-          <br /><br />
-          Link: <Link link="https://www.betterhelp.com/" text="https://www.betterhelp.com/" />
-        </>)
-      }
-    ]
-  },
-
-  {
-    mainTitle: "Referring Mentees",
-    buttons: [
-      {
-        heading: "Health 34",
-        text: (<> Team of healthcare educators and providers who deliver free, non-emergency support and service navigation for mental health and basic medical care to every segment of the UC Davis campus. <br />
-          Phone: 530-754-3434 <br /><br />
-          Link: <Link link="https://fire.ucdavis.edu/health34" text="https://fire.ucdavis.edu/health34" />
-        </>)
-      },
-      {
-        heading: "UC Davis Counseling (24/7 Mental Health Crisis Consultation)",
-        text: (<> Available after hours <br />
-          Phone: 530-752-0871 <br /> <br />
-          Link: <Link link="https://shcs.ucdavis.edu/crisis-care-and-urgent-help-resources" text="https://shcs.ucdavis.edu/crisis-care-and-urgent-help-resources" />
-        </>)
-      },
-      {
-        heading: "Aggie Compass Basic Needs Center",
-        text: (<> Financial, housing, and food insecurity resources
-          <ul className={styles.bullet}>
-            <li>
-              Referral link for student facing food or housing insecurity: <Link link="https://ucdavis-advocate.symplicity.com/collections/acbn-referral" text="https://ucdavis-advocate.symplicity.com/collections/acbn-referral" />
-            </li>
-          </ul> <br />
-          Link: <Link link="https://aggiecompass.ucdavis.edu" text="https://aggiecompass.ucdavis.edu" />
-        </>)
-      }
-    ]
-  },
-
-  {
     mainTitle: "Academic Resources",
     buttons: [
       {
@@ -223,22 +225,41 @@ const cards = [
 //Link: <a className={styles.link} href="LINK" onClick={handleLinkClick}>LINK</a>
 
 export default function Home() {
+  const resourceCardRefs = useRef([]);  
+
   return (
     <main className={styles.page}>
       <h1>header 1</h1>
       <p>body</p>
-      <div className={styles.cardContainer}>
-        <div className="row1">
-          <ResourceCard data={cards[0]} />
-          <ResourceCard data={cards[1]} />
-          <ResourceCard data={cards[2]} />
-        </div>
-        <div className="row2">
-          <ResourceCard data={cards[3]} />
-          <ResourceCard data={cards[4]} />
-          <ResourceCard data={cards[5]} />
+
+      <div className={styles.resourcesContainer}>
+        <div className={styles.resourcesBody}>
+
+          <Directory textData={cards} whereToScroll={(index) => {resourceCardRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });}}/>
+
+          <div className={styles.cardContainer}>
+            <div className={styles.column}>
+              {cards.map((card, index) => (
+                index % 2 == 0 && 
+                <div key={index} ref={(thisRef) => resourceCardRefs.current[index] = thisRef}>
+                  <ResourceCard data={card}/> 
+                </div>
+              ))}
+            </div>
+            <div className={styles.column}>
+            {cards.map((card, index) => (
+                index % 2 == 1 && 
+                <div key={index} ref={(thisRef) => resourceCardRefs.current[index] = thisRef}>
+                  <ResourceCard data={card}/> 
+                </div>
+              ))}
+            </div>
+
+          </div>
         </div>
       </div>
+
+      <div style={{height: "50rem"}}>Hello</div>
     </main>
   );
 }

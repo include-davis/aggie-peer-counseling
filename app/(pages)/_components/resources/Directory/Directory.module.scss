@@ -1,0 +1,43 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+.directory {
+    position: sticky;
+    width: 19.9375rem;
+    top: 1.5rem;
+}
+
+.titleBox {
+    height: 5.074rem;
+    border-radius: 1.25rem;
+    border: 1px solid #F6992F;
+    background: var(--sunset-peach);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mixins.fontStyle(2.5rem, 400, normal, 'JejuMyeongjo');
+}
+
+.body {
+    margin-top: 1.88rem;
+    background: var(--sunset-peach);
+    border-radius: 1.25rem;
+    border: 1px solid #F6992F;
+    padding: 3.61rem 1.38rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.text {
+    cursor: pointer;
+    text-decoration: underline;
+    @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+}
+
+.accommodationsText {
+    @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+}
+
+.link {
+    &:link, &:hover, &:visited, &:active {color: black;}
+  }

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./ResourceCard.module.scss";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 function ButtonWithDropdown({ titleText, dropdownText }) {
     const [clicked, setClicked] = useState(false);

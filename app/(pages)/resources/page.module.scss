@@ -15,11 +15,30 @@
   &:link, &:hover, &:visited, &:active {color: black;}
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+
+.resourcesContainer {
+  background-color: #FCF1D1;
+  padding: 5.25rem 1rem
+}
+
+.resourcesBody {
+  justify-content: center;
+  position: relative;
+  background-color: #FCF1D1; //add to globals
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
 .cardContainer {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  padding: 0 1.88rem;
   @include mixins.phone {
     flex-direction: column;
   }

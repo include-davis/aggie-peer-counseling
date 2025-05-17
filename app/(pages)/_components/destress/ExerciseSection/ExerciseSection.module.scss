@@ -1,248 +1,229 @@
 .pageContainer {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #4E6F98;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('/images/blueBackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 140px; /* Increased margin to avoid overlap with taller grass */
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  font-family: 'JejuMyeongjo';
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scrollableContainer {
+  max-height: 70vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: 10px;
+  
+  /* Custom scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdownBtn {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Jua';
+  color: #5279a2;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+}
+
+.activeBtn {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.dropdownContent {
+  width: 100%;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  color: #1E3666;
+  z-index: 10;
+  max-height: 400px;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+
+  .exerciseInstructions {
+    padding: 15px 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+    color: #1E3666;
+    font-family: 'Jua';
+    align-items: flex-start;
+  }
+
+  .exerciseImageContainer {
+    flex: 0 0 100px;
+    height: 120px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
   }
-  
-  
-  .starsContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  
-  .container {
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
-  
-  
-  .title {
-    color: white;
-    font-size: 2rem;
-    font-family: 'JejuMyeongjo';
-    margin-bottom: 2rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  .dropdown {
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-  
-  
-  .dropdownBtn {
-    width: 100%;
-    padding: 15px 20px;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: 'Jua';
-    color: #5279a2;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-  
-    &:hover {
-      background-color: #f8f8f8;
-    }
-  }
-  
-  
-  .dropdownContent {
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  .instructionSteps {
+    flex: 1;
     color: #1E3666;
-    z-index: 10;
-    margin-top: 8px;
-    max-height: 400px;
-    overflow-y: auto;
-  
-  
-    .exerciseItem {
-      border-bottom: 1px solid #eee;
-      color: #1E3666;
-      font-family: 'Jua';
-     
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-  
-  
-    .exerciseTitle {
-      display: block;
-      padding: 12px 20px;
-      text-decoration: none;
-      color: #444;
-      text-align: left;
-      font-family: 'Jua';
-      font-weight: bold;
-  
-  
-      &:hover {
-        background-color: #f1f1f1;
-      }
-    }
-  
-  
-    .exerciseInstructions {
-      padding: 10px 20px 20px;
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      text-align: left;
-      color: #1E3666;
-      font-family: 'Jua';
-      align-items: flex-start;
-    }
-  
-  
-    .exerciseImageContainer {
-      flex: 0 0 100px;
-      height: 120px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-  
-    .exerciseImagePink {
-      width: 80px;
-      height: 100px;
-      background-color: rgba(255, 192, 203, 0.2);
-      border-radius: 10px;
-      position: relative;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140"><circle cx="50" cy="40" r="20" fill="%23ffb6c1"/><circle cx="50" cy="40" r="15" fill="white"/><circle cx="45" cy="35" r="3" fill="black"/><circle cx="55" cy="35" r="3" fill="black"/><path d="M45,45 Q50,50 55,45" stroke="black" fill="none" stroke-width="1.5"/><rect x="35" y="60" width="30" height="40" rx="10" fill="%23ffb6c1"/><rect x="25" y="70" width="10" height="20" rx="5" fill="%23ffb6c1"/><rect x="65" y="70" width="10" height="20" rx="5" fill="%23ffb6c1"/><rect x="40" y="100" width="8" height="20" rx="4" fill="%23ffb6c1"/><rect x="52" y="100" width="8" height="20" rx="4" fill="%23ffb6c1"/><circle cx="43" cy="75" r="4" fill="white"/><circle cx="57" cy="75" r="4" fill="white"/></svg>');
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  
-  
-    .exerciseImageYellow {
-      width: 80px;
-      height: 100px;
-      background-color: rgba(255, 215, 0, 0.2);
-      border-radius: 10px;
-      position: relative;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140"><circle cx="50" cy="40" r="20" fill="%23ffd700"/><circle cx="50" cy="40" r="15" fill="white"/><circle cx="45" cy="35" r="3" fill="black"/><circle cx="55" cy="35" r="3" fill="black"/><path d="M45,45 Q50,50 55,45" stroke="black" fill="none" stroke-width="1.5"/><rect x="35" y="60" width="30" height="40" rx="10" fill="%23ffd700"/><rect x="25" y="70" width="10" height="20" rx="5" fill="%23ffd700"/><rect x="65" y="70" width="10" height="20" rx="5" fill="%23ffd700"/><rect x="40" y="100" width="8" height="20" rx="4" fill="%23ffd700"/><rect x="52" y="100" width="8" height="20" rx="4" fill="%23ffd700"/><circle cx="43" cy="75" r="4" fill="white"/><circle cx="57" cy="75" r="4" fill="white"/></svg>');
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  
-  
-    .exerciseImageBlue {
-      width: 80px;
-      height: 100px;
-      background-color: rgba(173, 216, 230, 0.2);
-      border-radius: 10px;
-      position: relative;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140"><circle cx="50" cy="40" r="20" fill="%23add8e6"/><circle cx="50" cy="40" r="15" fill="white"/><circle cx="45" cy="35" r="3" fill="black"/><circle cx="55" cy="35" r="3" fill="black"/><path d="M45,45 Q50,50 55,45" stroke="black" fill="none" stroke-width="1.5"/><rect x="35" y="60" width="30" height="40" rx="10" fill="%23add8e6"/><rect x="25" y="70" width="10" height="20" rx="5" fill="%23add8e6"/><rect x="65" y="70" width="10" height="20" rx="5" fill="%23add8e6"/><rect x="40" y="100" width="8" height="20" rx="4" fill="%23add8e6"/><rect x="52" y="100" width="8" height="20" rx="4" fill="%23add8e6"/><circle cx="43" cy="75" r="4" fill="white"/><circle cx="57" cy="75" r="4" fill="white"/></svg>');
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  
-  
-    .instructionSteps {
-      flex: 1;
-      color: #1E3666;
-      font-family: 'Jua';
-    }
-  
-  
-    .instructionStep {
-      display: flex;
-      margin-bottom: 8px;
-      line-height: 1.4;
-      color: #1E3666;
-      font-family: 'Jua';
-     
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  
-  
-    .stepNumber {
-      color: #5279a2;
-      font-weight: bold;
-      margin-right: 8px;
-      min-width: 52px;
-    }
-  
-  
-    .stepText {
-      color: #1E3666;
-      font-family: 'Jua';
+    font-family: 'Jua';
+  }
+
+  .instructionStep {
+    display: flex;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: #1E3666;
+    font-family: 'Jua';
+   
+    &:last-child {
+      margin-bottom: 0;
     }
   }
-  
-  
-  .chevron {
-    transition: transform 0.3s ease;
+
+  .stepNumber {
+    color: #5279a2;
+    font-weight: bold;
+    margin-right: 8px;
+    min-width: 52px;
   }
-  
-  
-  .rotate {
-    transform: rotate(180deg);
+
+  .stepText {
+    color: #1E3666;
+    font-family: 'Jua';
   }
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.grassContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Further increased height */
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+  background-color: #4E6F98; /* Match background color to avoid any transparency issues */
+}
+
+.grassImage {
+  position: absolute;
+  bottom: -15px; /* Move grass images further below the bottom */
+  height: auto;
+  max-height: 160px; /* Increased max-height */
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 -2px 3px rgba(0, 0, 0, 0.1));
   
-  
-  .open {
-    display: block;
+  &:hover {
+    transform: translateY(-5px);
   }
-  
-  
-  .grass {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0,50 Q25,0 50,50 Q75,100 100,50 Q125,0 150,50 Q175,100 200,50 Q225,0 250,50 Q275,100 300,50 Q325,0 350,50 Q375,100 400,50 Q425,0 450,50 Q475,100 500,50 Q525,0 550,50 Q575,100 600,50 Q625,0 650,50 Q675,100 700,50 Q725,0 750,50 Q775,100 800,50 Q825,0 850,50 Q875,100 900,50 Q925,0 950,50 Q975,100 1000,50 L1000,100 L0,100 Z" fill="%237396ba" opacity="0.5"/></svg>');
-    background-size: cover;
-  }
-  
-  
-  
-  .star {
-    position: absolute;
-    background-color: #ffffc0;
-    border-radius: 50%;
-    filter: blur(2px);
-    opacity: 0.8;
-    animation: twinkle 3s infinite alternate;
-  }
-  
-  
-  @keyframes twinkle {
-    0% { opacity: 0.3; }
-    100% { opacity: 0.8; }
-  }
-  
+}
+
+.pageContainer {
+  background-image: url('/images/blueBackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.starsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.starImage {
+  position: absolute;
+  opacity: 0.9;
+  animation: flicker 4s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.1); }
+}

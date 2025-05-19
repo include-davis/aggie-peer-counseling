@@ -1,23 +1,25 @@
+"use client";
 import styles from "./Directory.module.scss";
+import { } from "react";
 
-export default function Directory({whereToScroll, textData}) {
+export default function Directory({ whereToScroll, textData }) { 
     return (
-        <div>
+        <main>
             <div className={styles.directory}>
-                <div className={styles.titleBox}>
+                <h1 className={styles.titleBox}>
                     Directory
-                </div>
+                </h1>
                 <div className={styles.body}>
                     {textData.map((card, index) => (
-                        <div className={styles.text} key={index} onClick={() => whereToScroll(card.id)}>
+                        <h1 className={styles.text} key={index} onClick={() => whereToScroll(card.id)}>
                             {card.id}
-                        </div>
+                        </h1>
                     ))}
-                    <div className={styles.accommodationsText}>
+                    <h1 className={styles.accommodationsText}>
                         Accommodations: <a className={styles.link} href="https://sdc.ucdavis.edu/">Student Disability Center</a> located in Cowell Building
-                    </div>
+                    </h1>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

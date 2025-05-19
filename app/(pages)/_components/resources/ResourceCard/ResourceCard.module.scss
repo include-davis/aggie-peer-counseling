@@ -19,10 +19,18 @@
     text-align: center;
     padding: 3.12rem 0;
     gap: 1.81rem;
+    @include mixins.tablet {
+        width: 19.625rem;
+        @include mixins.fontStyle(1.25rem, 400, normal, 'JejuMyeongjo');
+        padding: 2rem 0;
+        gap: 1rem;
+        border-radius: 1.5625rem;
+      }
 }
 
 .dropdownButton {
     width: 31.3125rem;
+    height: 8.625rem;
     background-color: var(--sunset-peach);
     border: 0.063rem, solid;
     border-radius: 1.25rem;
@@ -34,12 +42,11 @@
     gap: 0.44rem;
     cursor: pointer;
     transition: height 0.5s ease;
-}
-
-.boxAndSVG {
-    display: flex;
-    flex-direction: row;
-    padding: 2.16rem 0;
+    @include mixins.tablet {
+        border-radius: 1rem;
+        width: 17.1875rem;
+        height: 5.75rem;
+      }
 }
 
 .dropdownButtonBox {
@@ -52,19 +59,44 @@
     justify-content: center;
     align-items: center;  
     text-align: center;
-}
-
-.dropdownButtonBoxText {
-    padding: 0 1.45rem;
+    @include mixins.tablet {
+        width: 13.5rem;
+        height: 3.75rem;
+        @include mixins.fontStyle(1rem, 400, normal, 'Jua');
+        border-radius: 1rem;
+      }
 }
 
 .dropdownSVG {
     height: 3.875rem;
     width: 3.875rem;
     position: relative;
-    top: 0.26rem;
     user-select: none;
     transition: transform .25s ease;
+    @include mixins.tablet {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+}
+
+.boxAndSVG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.16rem 0;
+    @include mixins.tablet {
+        padding: 1rem 0rem;
+        gap: .3rem;
+      }
+}
+
+
+
+.dropdownButtonBoxText {
+    padding: 0 1.45rem;
+    @include mixins.tablet {
+        padding: 0rem .5rem;
+      }
 }
 
 .dropdownSVG.rotated {
@@ -77,4 +109,9 @@
     @include mixins.fontStyle(1.25rem, 400, normal, 'Jua');
     padding-bottom: 2.13rem;
     animation: fadeIn 0.75s ease-in forwards;
+    @include mixins.tablet {
+        @include mixins.fontStyle(0.75rem, 400, normal, 'Jua');
+        width: 15rem; 
+        padding-bottom: 1.5rem;
+      }
 }

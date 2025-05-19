@@ -12,25 +12,26 @@ export default function Home() {
 
       <div className={styles.resourcesContainer}>
         <div className={styles.resourcesBody}>
-
           <Directory textData={cards} whereToScroll={(id) => {
             const scrollTo = document.getElementById(id);
-            scrollTo.scrollIntoView({ behavior: 'smooth' });}}/>
+            scrollTo.scrollIntoView({ behavior: 'smooth' });
+          }} />
+
 
           <div className={styles.cardContainer}>
             <div className={styles.column}>
               {cards.map((card, index) => (
-                index % 2 == 0 && 
+                index % 2 == 0 &&
                 <div key={index} id={card.id}>
-                  <ResourceCard data={card}/> 
+                  <ResourceCard data={card} />
                 </div>
               ))}
             </div>
             <div className={styles.column}>
-            {cards.map((card, index) => (
-                index % 2 == 1 && 
+              {cards.map((card, index) => (
+                index % 2 == 1 &&
                 <div key={index} id={card.id}>
-                  <ResourceCard data={card}/> 
+                  <ResourceCard data={card} />
                 </div>
               ))}
             </div>
@@ -39,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{height: "20rem"}}>Hello</div>
+      <div style={{ height: "20rem" }}>Hello</div>
     </main>
   );
 }

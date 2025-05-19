@@ -11,6 +11,7 @@ export default function Home() {
       <p>body</p>
 
       <div className={styles.resourcesContainer}>
+        
         <div className={styles.resourcesBody}>
           <Directory textData={cards} whereToScroll={(id) => {
             const scrollTo = document.getElementById(id);

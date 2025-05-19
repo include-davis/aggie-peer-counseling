@@ -102,7 +102,8 @@
         padding-top: 0rem
     }
     @include mixins.phone {
-    padding-top: 0.5rem;
+        padding-top: 0.5rem;
+        @include mixins.fontStyle(.78rem, 400, normal, 'JejuMyeongjo');
     }
 }
 

@@ -1,4 +1,3 @@
-// QuoteBanner.jsx
 import React from "react";
 import styles from "./QuoteBanner.module.scss";
 
@@ -20,13 +19,14 @@ const QuoteBanner = ({ bannerNumber }) => {
         alt="background"
         className={styles.background}
       />
-      {isBanner1 ? (
+      {isBanner1 && (
         <img
           src={`${basePath}/stars.png`}
           alt="stars"
           className={styles.stars}
         />
-      ) : (
+      )}
+      {!isBanner1 && (
         <img
           src={`${basePath}/star.png`}
           alt="star"

@@ -30,12 +30,14 @@
         height: 4rem;
         width: 15rem;
         border-radius: 1rem;
+        margin-bottom: 1rem;
     }
     @include mixins.phone {
         @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
         height: 3.5rem;
         width: 11rem;
         border-radius: 0.9rem;
+        margin-bottom: 0.8rem;
     }
 }
 

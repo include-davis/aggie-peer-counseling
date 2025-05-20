@@ -14,7 +14,7 @@
 .titleBox {
     height: 5rem;
     border-radius: 1.25rem;
-    border: 1px solid #F6992F;
+    border: 1px solid var(--sunset-orange);
     background: var(--sunset-peach);
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
 .body {
     background: var(--sunset-peach);
     border-radius: 1.25rem;
-    border: 1px solid #F6992F;
+    border: 1px solid var(--sunset-orange);
     padding: 3.61rem 1.38rem;
     display: flex;
     flex-direction: column;

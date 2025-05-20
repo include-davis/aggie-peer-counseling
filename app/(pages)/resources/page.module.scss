@@ -7,14 +7,14 @@
 }
 
 .resourcesContainer {
-  background-color: #FCF1D1;
+  background-color: var(--sunset-milk);
   padding: 5.25rem 1rem;
 }
 
 .resourcesBody {
   justify-content: center;
   position: relative;
-  background-color: #FCF1D1; //add to globals
+  background-color: var(--sunset-milk); 
   display: flex;
   flex-direction: row;
   gap: 1.5rem;

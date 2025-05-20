@@ -1,0 +1,72 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.singleStar {
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  width: 40px;
+}
+
+.vector {
+  position: absolute;
+  width: 10%;
+  pointer-events: none;
+}
+
+.vector1 {
+  top: 5%;
+  left: 5%;
+}
+
+.vector2 {
+  top: 10%;
+  right: 10%;
+}
+
+.vector3 {
+  bottom: 15%;
+  left: 15%;
+}
+
+.vector4 {
+  bottom: 10%;
+  right: 15%;
+}
+
+.vector5 {
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}

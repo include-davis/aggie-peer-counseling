@@ -9,17 +9,27 @@ export default function MusicCard({ imagePath, altText }) {
     const playAudio = () => {
         if (typeof window !== "undefined") {
             if (!audioRef.current) {
+                // Add all your sounds here
                 if (altText === "Rain sound") {
                     audioRef.current = new Audio("/sound/rain.mp3");
-                }
-                if (altText === "piano sound") {
+                } else if (altText === "Piano sound") {
                     audioRef.current = new Audio("/sound/piano.mp3");
-                }
-                if (altText === "ocean sound") {
+                } else if (altText === "Ocean sound") {
                     audioRef.current = new Audio("/sound/ocean.mp3");
+                } else if (altText === "Forest sound") {
+                    audioRef.current = new Audio("/sound/forest.mp3");
+                } else if (altText === "Fire sound") {
+                    audioRef.current = new Audio("/sound/fire.mp3");
+                } else if (altText === "Waves sound") {
+                    audioRef.current = new Audio("/sound/waves.mp3");
                 }
             }
-            audioRef.current.play();
+            // Only play if audioRef.current is set
+            if (audioRef.current) {
+                audioRef.current.play();
+            } else {
+                console.warn("No audio file found for", altText);
+            }
         }
     };
 

@@ -56,19 +56,19 @@ export default function MusicCard({ imagePath, altText }) {
                     <div className={styles.progressRow}>
                         <div className={styles.progressBar}></div>
                     </div>
-                    <div className={styles.circlesRow}>
+                    <div className={styles.controlsRow}>
                         <div className={styles.sideCircle}></div>
+                        <div className={styles.controls}>
+                            <Image 
+                                src={isPlaying ? '/images/destress_relaxing_sounds/pauseButton.svg' : '/images/destress_relaxing_sounds/playbutton.svg'}
+                                alt={isPlaying ? "Pause" : "Play"}
+                                width={40}
+                                height={40}
+                                className={styles.playButton}
+                                onClick={togglePlayer}
+                            />
+                        </div>
                         <div className={styles.sideCircle}></div>
-                    </div>
-                    <div className={styles.controls}>
-                        <Image 
-                            src={isPlaying ? '/images/destress_relaxing_sounds/pauseButton.svg' : '/images/destress_relaxing_sounds/playbutton.svg'}
-                            alt={isPlaying ? "Pause" : "Play"}
-                            width={40}
-                            height={40}
-                            className={styles.playButton}
-                            onClick={togglePlayer}
-                        />
                     </div>
                 </div>
             </div>

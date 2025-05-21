@@ -125,18 +125,24 @@
     border-radius: 0.125rem;
 }
 
-.circlesRow {
+.controlsRow {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
-    padding: 0 2.5rem; /* space from edges */
+    padding: 0 2.5rem;
 }
 
 .sideCircle {
-    width: 1.25rem;   /* 20px */
+    width: 1.25rem;
     height: 1.25rem;
     background: #DDB087;
     border-radius: 50%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

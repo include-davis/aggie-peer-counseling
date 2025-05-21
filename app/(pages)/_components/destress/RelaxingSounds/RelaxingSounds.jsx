@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
 import styles from "./RelaxingSounds.module.scss";
-import MusicCard from "./musicCard"; 
-import { useRef, useState } from "react"; 
+import MusicCard from "./musicCard";
+import { useRef, useState, useEffect } from "react";
 
-
-function RelaxingSounds() {
+export default function RelaxingSounds() {
     const containerRef = useRef(null);
     const [isAtStart, setIsAtStart] = useState(true);
     const [isAtEnd, setIsAtEnd] = useState(false);
@@ -15,85 +14,69 @@ function RelaxingSounds() {
             const container = containerRef.current;
             setIsAtStart(container.scrollLeft === 0);
             setIsAtEnd(
-                container.scrollLeft + container.clientWidth >= container.scrollWidth - 1
+                Math.ceil(container.scrollLeft + container.clientWidth) >= container.scrollWidth
             );
         }
     };
 
     const scrollNext = () => {
-        if(containerRef.current){
+        if (containerRef.current) {
             const container = containerRef.current;
             const cardWidth = container.firstChild.offsetWidth;
-            container.scrollBy({ left: cardWidth * 4, behavior: "smooth" });
-            // Update button visibility after scroll
-            setTimeout(checkScrollPosition, 500); // Wait for smooth scroll to complete
+            const scrollAmount = (cardWidth + 55) * 3; // Scroll 3 cards at a time (including gaps)
+            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            setTimeout(checkScrollPosition, 500);
         }
-    }
+    };
+
     const scrollPrev = () => {
         if (containerRef.current) {
             const container = containerRef.current;
             const cardWidth = container.firstChild.offsetWidth;
-            container.scrollBy({ left: -cardWidth * 4, behavior: "smooth" });
-            // Update button visibility after scroll
-            setTimeout(checkScrollPosition, 500); // Wait for smooth scroll to complete
+            const scrollAmount = (cardWidth + 55) * 3; // Scroll 3 cards at a time (including gaps)
+            container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+            setTimeout(checkScrollPosition, 500);
         }
     };
+
+    useEffect(() => {
+        checkScrollPosition();
+    }, []);
+
     return (
         <div className={styles.background}>
-            <div>
-                <h1 className={styles.title}>Relaxing Sounds</h1>
-            </div>          
+            <h1 className={styles.title}>Relaxing Sounds</h1>
             <div className={styles.musicCardContainer}>
                 <Image
-                    onClick={scrollPrev}
                     src="/images/destress_relaxing_sounds/leftScroll.svg"
-                    alt="scroll left"
-                    width={281}
-                    height={387}
+                    alt="Scroll Left"
+                    width={54}
+                    height={54}
                     className={`${styles.scrollButtons} ${isAtStart ? styles.hidden : ''}`}
+                    onClick={scrollPrev}
                 />
-            <div 
-                ref={containerRef} 
-                className={styles.cardsTrack}
-                onScroll={checkScrollPosition}
-            >
-                <MusicCard 
-                    imagePath = "rain"
-                    altText = "Rain sound"
-                />
-                <MusicCard
-                    imagePath = "piano"
-                    altText = "piano sound"
-                />
-                <MusicCard
-                    imagePath = "ocean"
-                    altText = "ocean sound"
-                />
-                <MusicCard 
-                    imagePath = "piano"
-                    altText = "piano sound"
-                />
-                <MusicCard
-                    imagePath = "rain"
-                    altText = "rain sound"
-                />
-                <MusicCard
-                    imagePath = "ocean"
-                    altText = "ocean sound"
-                />
-            </div>
+                <div 
+                    ref={containerRef}
+                    className={styles.cardsTrack}
+                    onScroll={checkScrollPosition}
+                >
+                    <MusicCard imagePath="rain" altText="Rain sound" />
+                    <MusicCard imagePath="piano" altText="Piano sound" />
+                    <MusicCard imagePath="ocean" altText="Ocean sound" />
+                    <MusicCard imagePath="forest" altText="Forest sound" />
+                    <MusicCard imagePath="fire" altText="Fire sound" />
+                    <MusicCard imagePath="waves" altText="Waves sound" />
+                </div>
                 <Image
-                    onClick={scrollNext}
                     src="/images/destress_relaxing_sounds/rightScroll.svg"
-                    alt="scroll right"
-                    width={281}
-                    height={387}
+                    alt="Scroll Right"
+                    width={54}
+                    height={54}
                     className={`${styles.scrollButtons} ${isAtEnd ? styles.hidden : ''}`}
+                    onClick={scrollNext}
                 />
             </div>
         </div>
-        
-    )
+    );
 }
-export default RelaxingSounds;
 

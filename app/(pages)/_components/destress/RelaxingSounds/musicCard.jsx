@@ -3,23 +3,21 @@ import styles from "./musicCard.module.scss";
 import { useState, useRef } from "react";
 
 export default function MusicCard({ imagePath, altText }) {
-    const [currentImagePath, setCurrentImagePath] = useState("/images/destress_relaxing_sounds/playbutton.svg"); // Initial image path
-    const audioRef = useRef(null); // Store the Audio object
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef(null);
 
     const playAudio = () => {
         if (typeof window !== "undefined") {
             if (!audioRef.current) {
-                // Initialize the Audio object only once
                 if (altText === "Rain sound") {
                     audioRef.current = new Audio("/sound/rain.mp3");
                 }
-                if( altText === "piano sound") {
+                if (altText === "piano sound") {
                     audioRef.current = new Audio("/sound/piano.mp3");
                 }
-                if( altText === "ocean sound") {
+                if (altText === "ocean sound") {
                     audioRef.current = new Audio("/sound/ocean.mp3");
                 }
-
             }
             audioRef.current.play();
         }
@@ -31,34 +29,42 @@ export default function MusicCard({ imagePath, altText }) {
         }
     };
 
-    const player = () => {
-        if (currentImagePath === "/images/destress_relaxing_sounds/playbutton.svg") {
-            setCurrentImagePath("/images/destress_relaxing_sounds/pausebutton.svg"); // Update to pause button
+    const togglePlayer = () => {
+        if (!isPlaying) {
+            setIsPlaying(true);
             playAudio();
         } else {
-            setCurrentImagePath("/images/destress_relaxing_sounds/playbutton.svg"); // Reset to play button
+            setIsPlaying(false);
             pauseAudio();
         }
     };
 
     return (
         <div className={styles.cardContainer}>
-            <Image 
-                src={`/images/destress_relaxing_sounds/${imagePath}MusicCard.svg`} // Use the imagePath prop for the main image
-                alt={altText} 
-                width={281}
-                height={387}
-                className={styles.largeImage}
-            />
-
-            <Image
-                src={currentImagePath} // Use the dynamic currentImagePath for the play/pause button
-                alt={"play/pause button"} 
-                width={40}
-                height={40}
-                className={styles.overlayImage}
-                onClick={player} // Call the player function on click
-            />
+            <div className={styles.card}>
+                <div className={styles.imageContainer}>
+                    <Image 
+                        src={`/images/destress_relaxing_sounds/${imagePath}MusicCard.svg`}
+                        alt={altText} 
+                        width={192}
+                        height={192}
+                        className={styles.largeImage}
+                    />
+                </div>
+                <div className={styles.cardInfo}>
+                    <h3 className={styles.soundTitle}>{altText}</h3>
+                    <div className={styles.controls}>
+                        <Image 
+                            src={isPlaying ? '/images/destress_relaxing_sounds/pauseButton.svg' : '/images/destress_relaxing_sounds/playbutton.svg'}
+                            alt={isPlaying ? "Pause" : "Play"}
+                            width={40}
+                            height={40}
+                            className={styles.playButton}
+                            onClick={togglePlayer}
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

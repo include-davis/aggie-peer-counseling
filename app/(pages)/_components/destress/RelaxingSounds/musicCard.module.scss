@@ -1,7 +1,11 @@
-
+.cardContainer {
+    position: relative;
+    width: 17.5625rem; /* 281px / 16 = 17.5625rem */
+    height: 24.1875rem; /* 387px / 16 = 24.1875rem */
+}
 
 .card {
-    width: 100%;
+    width: 120.43%;
     height: 100%;
     background: #F4DA9D;
     border: 0.0625rem solid #8D4D13; /* 1px */
@@ -29,9 +33,11 @@
 
 .soundTitle {
     font-size: 1.25rem;
-    color: #8D4D13; /* Changed to match the border color */
+    color: #8D4D13;
     margin-bottom: 1rem;
     font-family: 'JejuMyeongjo', Times, serif;
+    text-align: left;      // Add this
+    margin-left: 1rem;     // Add some left margin for spacing
 }
 
 .controls {
@@ -103,4 +109,34 @@
     box-shadow: 0px 0.125rem 0.25rem rgba(0, 0, 0, 0.4); /* 2px / 16 = 0.125rem, 4px / 16 = 0.25rem */
     background-color: rgba(255, 255, 255, 0.8); /* Add a lighter background color */
     filter: brightness(1.2); /* Slightly brighten the button */
+}
+
+.progressRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.progressBar {
+    width: 90%;
+    height: 0.25rem;
+    background: #DDB087;
+    border-radius: 0.125rem;
+}
+
+.circlesRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 2.5rem; /* space from edges */
+}
+
+.sideCircle {
+    width: 1.25rem;   /* 20px */
+    height: 1.25rem;
+    background: #DDB087;
+    border-radius: 50%;
 }

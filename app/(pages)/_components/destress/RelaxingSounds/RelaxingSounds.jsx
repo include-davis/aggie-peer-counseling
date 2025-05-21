@@ -23,7 +23,7 @@ export default function RelaxingSounds() {
         if (containerRef.current) {
             const container = containerRef.current;
             const cardWidth = container.firstChild.offsetWidth;
-            const scrollAmount = (cardWidth + 55) * 3; // Scroll 3 cards at a time (including gaps)
+            const scrollAmount = container.clientWidth; // Scroll 3 cards at a time (including gaps)
             container.scrollBy({ left: scrollAmount, behavior: "smooth" });
             setTimeout(checkScrollPosition, 500);
         }
@@ -33,7 +33,7 @@ export default function RelaxingSounds() {
         if (containerRef.current) {
             const container = containerRef.current;
             const cardWidth = container.firstChild.offsetWidth;
-            const scrollAmount = (cardWidth + 55) * 3; // Scroll 3 cards at a time (including gaps)
+            const scrollAmount = container.clientWidth; // Scroll 3 cards at a time (including gaps)
             container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
             setTimeout(checkScrollPosition, 500);
         }

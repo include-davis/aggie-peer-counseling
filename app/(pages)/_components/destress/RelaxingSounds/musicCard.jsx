@@ -53,6 +53,13 @@ export default function MusicCard({ imagePath, altText }) {
                 </div>
                 <div className={styles.cardInfo}>
                     <h3 className={styles.soundTitle}>{altText}</h3>
+                    <div className={styles.progressRow}>
+                        <div className={styles.progressBar}></div>
+                    </div>
+                    <div className={styles.circlesRow}>
+                        <div className={styles.sideCircle}></div>
+                        <div className={styles.sideCircle}></div>
+                    </div>
                     <div className={styles.controls}>
                         <Image 
                             src={isPlaying ? '/images/destress_relaxing_sounds/pauseButton.svg' : '/images/destress_relaxing_sounds/playbutton.svg'}

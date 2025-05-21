@@ -41,21 +41,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3.4375rem; /* 55px */
-    margin-top: 1.25rem; /* 20px */
-    width: 58.6875rem; /* (281px * 3) + (55px * 2) = 953px -> 953/16 = 58.6875rem */
+    gap: .33rem; /* 192px */
+    margin-top: 1.25rem;
+    width: 76.6875rem; /* 1227px */
 }
 
 .cardsTrack {
     display: flex;
-    gap: 3.4375rem; /* 55px */
+    gap: 9rem; /* 192px */
+    width: 100%;      /* <-- Add this line */
     overflow: hidden;
     scroll-behavior: smooth;
-    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none;  /* Hide scrollbar for Firefox */
-    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
     &::-webkit-scrollbar {
-        display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        display: none;
     }
 }
 
@@ -79,4 +80,17 @@
 .hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+// musicCard.module.scss
+.cardContainer {
+    position: relative;
+    width: 17.5625rem; /* 281px */
+    height: 24.1875rem; /* 387px */
+}
+
+.card {
+    width: 100%; // NOT 120.43%!
+    height: 100%;
+    // ...rest of your styles
 }

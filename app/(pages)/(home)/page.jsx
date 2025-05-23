@@ -1,10 +1,11 @@
 import styles from "./page.module.scss";
-
+import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
+import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
 export default function Home() {
   return (
     <main className={styles.page}>
-      <h1>Header 1</h1>
-      <p>body</p>
+      <WhatWeDo></WhatWeDo>
+      <EmergencyContact></EmergencyContact>
     </main>
   );
 }

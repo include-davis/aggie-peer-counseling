@@ -1,6 +1,5 @@
 "use client";
 import styles from "./Directory.module.scss";
-import { } from "react";
 
 export default function Directory({ whereToScroll, textData }) { 
     return (

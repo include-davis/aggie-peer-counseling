@@ -7,7 +7,7 @@ import { cards } from "./resourcesData"
 export default function Home() {
   return (
     <main className={styles.page}>
-      <h1>header 1</h1>
+      <h1>Header 1</h1>
       <p>body</p>
 
       <div className={styles.resourcesContainer}>

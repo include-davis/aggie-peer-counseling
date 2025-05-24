@@ -67,6 +67,13 @@
       }
 }
 
+.dropdownButtonBoxText {
+    padding: 0 0.82rem;
+    @include mixins.tablet {
+        padding: 0rem .5rem;
+      }
+}
+
 .dropdownSVG {
     height: 3.875rem;
     width: 3.875rem;
@@ -79,6 +86,10 @@
       }
 }
 
+.dropdownSVG.rotated {
+    transform: rotate(180deg); 
+}
+
 .boxAndSVG {
     display: flex;
     flex-direction: row;
@@ -88,19 +99,6 @@
         padding: 1rem 0rem;
         gap: .3rem;
       }
-}
-
-
-
-.dropdownButtonBoxText {
-    padding: 0 1.45rem;
-    @include mixins.tablet {
-        padding: 0rem .5rem;
-      }
-}
-
-.dropdownSVG.rotated {
-    transform: rotate(180deg); 
 }
 
 .expandedText {

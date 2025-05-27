@@ -45,11 +45,13 @@
     background: var(--sunset-peach);
     border-radius: 1.25rem;
     border: 1px solid var(--sunset-orange);
-    padding: 3.61rem 1.38rem;
+    padding: 3.61rem 0rem;
+    padding-left: 1.38rem;
+    padding-right: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+
     @include mixins.med-desktop {
         width: 69.25rem;
         display: flex;

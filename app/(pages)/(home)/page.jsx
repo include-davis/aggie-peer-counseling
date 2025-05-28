@@ -6,6 +6,7 @@ export default function Home() {
     <main className={styles.page}>
       <WhatWeDo></WhatWeDo>
       <EmergencyContact></EmergencyContact>
+      
     </main>
   );
 }

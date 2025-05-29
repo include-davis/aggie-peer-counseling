@@ -3,7 +3,7 @@ import styles from "./FormsSection.module.scss";
 
 function Form ({ text , image }) {
     return (
-        <main className={styles.form_background}>
+        <main className={styles.form_background} style={{background-image: image}}>
             <div className={styles.form_text}>
                 {text}
             </div>

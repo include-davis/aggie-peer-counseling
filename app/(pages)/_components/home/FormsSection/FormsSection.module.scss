@@ -1,4 +1,29 @@
-.backgroundImage {
-    width: 100%;
-    height: auto;
+
+.forms_section {
+    background-image: url('/images/FormsSection/background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8.3rem 12.5rem;
+}
+
+.form_background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form_text {
+    background-color: var(--day-grass);
+    width: 18.5625rem;
+    padding: 1rem 0;
+    border-radius: 2.75rem;
+    text-align: center;
 }

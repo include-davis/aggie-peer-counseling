@@ -1,10 +1,22 @@
 import Image from 'next/image';
 import styles from "./FormsSection.module.scss";
 
+function Form ({ text , image }) {
+    return (
+        <main className={styles.form_background}>
+            <div className={styles.form_text}>
+                {text}
+            </div>
+        </main>
+    )
+}
+
 export default function FormsSection() {
     return (
-        <main>
-            <Image width={0} height={0} className={styles.backgroundImage} src="./images/FormsSection/background.svg" alt="hello"/>
+        <main className={styles.forms_section}>
+            <div className={styles.wrapper}>
+                <Form text={"hi"}/>
+            </div>
         </main>
     )
 }

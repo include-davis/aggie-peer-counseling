@@ -5,7 +5,7 @@ const handleLinkClick = (e) => {
 };
 
 function Link({ link, text }) {
-    return <a className={styles.link} href={link} onClick={handleLinkClick}>{text}</a>;
+    return <a className={styles.link} href={link} onClick={handleLinkClick} target="_blank" rel="noopener noreferrer">{text}</a>;
 }
 
 export const cards = [

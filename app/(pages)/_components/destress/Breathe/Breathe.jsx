@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import "./Breathe.modules.scss";
+// import "./Breathe.modules.scss";
+import styles from "./Breathe.module.scss"
 import Background from "@/public/images/destress/breathe.svg";
 
 export default function Breathe() {
@@ -15,25 +16,18 @@ export default function Breathe() {
   }, []);
 
   return (
-    <div className="breathe-wrapper">
-      <Image
-        src={Background}
-        alt="Breathing background"
-        layout="fill"
-        objectFit="cover"
-        className="breathe-bg"
-        priority
-      />
-      <div className="circle-container">
-        <div className="outer-circle"></div>
+    <div className={styles.breatheWrapper}>
+    
+      <div className={styles.circleContainer}>
+        <div className={styles.outerCircle}></div>
         <div
-          className="timer-ring"
+          className={styles.timerRing}
           style={{
             background: `conic-gradient(#6F8EBC ${angle}deg, transparent ${angle}deg)`,
-          }}
+          }}  
         ></div>
-        <div className="inner-circle"></div>
-        <p className="breathe-text">breathe</p>
+        <div className={styles.innerCircle}></div>
+        <h2 className={styles.breatheText}>breathe</h2>
       </div>
 
     </div>

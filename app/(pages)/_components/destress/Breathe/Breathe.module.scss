@@ -1,0 +1,248 @@
+@use 'app/(pages)/_globals/mixins.scss';
+
+.breatheWrapper {
+    margin: 0;
+  padding: 0;
+  background-color: #225A7F;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 100vw;
+  height: 38rem; // desktop
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/images/destress/breathe.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include mixins.phone {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/images/destress/breathemobile.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.circleContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outerCircle {
+  width: 22rem;
+  height: 22rem;
+  flex-shrink: 0;
+  position: absolute;
+  border-radius: 50%;
+  background: #A9BED1;
+  z-index: 2;
+
+  @include mixins.phone {
+    width: 30rem;
+    height: 30rem;
+    flex-shrink: 0;
+  }
+}
+
+.timerRing {
+  width: 22rem;
+  height: 22rem;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 3;
+
+    @include mixins.phone {
+    width: 30rem;
+    height: 30rem;
+    flex-shrink: 0;
+  }
+}
+
+.innerCircle {
+  width: 16rem;
+  height: 16rem;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #DBE5ED;
+  border-radius: 50%;
+  z-index: 4;
+  animation: pulse 3s infinite ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.phone {
+    width: 20rem;
+    height: 20rem;
+    flex-shrink: 0;
+  }
+}
+
+.breatheText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+
+  @include mixins.fontStyle(2rem, 700, normal, 'Jua');
+
+  @include mixins.phone {
+    font-size: 2rem;
+  }
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+// .breatheWrapper {
+//     margin: 0;
+//   padding: 0;
+//   background-color: #225A7F;
+//   height: 100vh;
+//   overflow: hidden;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   position: relative;
+//   width: 100vw;
+//   height: 38rem; // desktop
+//   overflow: hidden;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   background-image: url('/images/destress/breathe.svg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+
+//   @include mixins.phone {
+//     height: 100vh;
+//     width: 100vw;
+//     background-image: url('/images/destress/breathemobile.svg');
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//   }
+// }
+
+// .circleContainer {
+//   position: relative;
+//   width: 300px;
+//   height: 300px;
+//   z-index: 1;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .outerCircle {
+//   width: 22rem;
+//   height: 22rem;
+//   flex-shrink: 0;
+//   position: absolute;
+//   border-radius: 50%;
+//   background: #A9BED1;
+//   z-index: 1;
+
+//   @include mixins.phone {
+//     width: 30rem;
+//     height: 30rem;
+//     flex-shrink: 0;
+//   }
+// }
+
+// .timerRing {
+//   width: 22rem;
+//   height: 22rem;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   border-radius: 50%;
+//   z-index: 2;
+
+//   @media (max-width: 768px) {
+//     width: 30rem;
+//     height: 30rem;
+//   }
+// }
+
+// .innerCircle {
+//   width: 16rem;
+//   height: 16rem;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   background: #DBE5ED;
+//   border-radius: 50%;
+//   z-index: 3;
+//   animation: pulse 3s infinite ease-in-out;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   @media (max-width: 768px) {
+//     width: 20rem;
+//     height: 20rem;
+//   }
+// }
+
+// .breatheText {
+//   font-size: 1.5rem;
+//   color: #000;
+//   font-weight: bold;
+//   text-align: center;
+//   z-index: 4;
+//   margin: 0;
+
+//   @media (max-width: 768px) {
+//     font-size: 2rem;
+//   }
+// }
+
+// @keyframes pulse {
+//   0%, 100% {
+//     transform: translate(-50%, -50%) scale(1);
+//   }
+//   50% {
+//     transform: translate(-50%, -50%) scale(1.15);
+//   }
+// }

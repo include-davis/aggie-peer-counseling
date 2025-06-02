@@ -1,4 +1,5 @@
 import styles from "./page.module.scss";
+import Breathe from "../_components/destress/Breathe/Breathe";
 import Hero from "../_components/common/Hero/Hero";
 import Breathe from "../_components/destress/Breathe/Breathe";
 

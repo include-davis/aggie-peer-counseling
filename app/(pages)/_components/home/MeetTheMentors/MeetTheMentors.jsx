@@ -21,15 +21,8 @@ const mentors = [
 export default function Mentors() {
   return (
     <section className={styles.mentorsSection}>
-      <Image
-        src={Background}
-        alt="Leaf background"
-        className={styles.background}
-        fill
-        priority
-      />
 
-      <h2 className={styles.title}>Meet The Mentors</h2>
+      <h1 className={styles.title}>Meet The Mentors</h1>
 
       <div className={styles.mentorGrid}>
         {mentors.slice(0, 3).map((mentor) => (
@@ -43,7 +36,7 @@ export default function Mentors() {
                 priority
             />
                 <div className={styles.mentorText}>
-                    <strong>{mentor.name}</strong>
+                    <h2>{mentor.name}</h2>
                     <p>{mentor.pronouns}</p>
                 </div>
             </div>
@@ -61,7 +54,7 @@ export default function Mentors() {
                     priority
                     />
                     <div className={styles.mentorText}>
-                    <strong>{mentor.name}</strong>
+                    <h2>{mentor.name}</h2>
                     <p>{mentor.pronouns}</p>
                     </div>
                 </div>

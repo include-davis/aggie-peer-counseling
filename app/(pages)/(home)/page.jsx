@@ -4,6 +4,8 @@ import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
 import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
 import MeetTheMentors from "../_components/home/MeetTheMentors/MeetTheMentors"
 import Program from "../_components/home/Program/Program";
+import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
+import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
 
 export default function Home() {
   return (
@@ -12,8 +14,8 @@ export default function Home() {
         title="Aggie Peer Counseling"
         subtitle="Here for you, Rain or Shine"
       />
-      <WhatWeDo></WhatWeDo>
-      <EmergencyContact></EmergencyContact>
+      <EmergencyContact />
+      <WhatWeDo />
       <Program />
       <MeetTheMentors></MeetTheMentors>
       <h1>home</h1>

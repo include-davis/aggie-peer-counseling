@@ -14,9 +14,6 @@ export default function Home() {
         title="Resources"
         subtitle="Support made just for you"
       />
-      <h1>Header 1</h1>
-      <p>body</p>
-
       <div className={styles.resourcesContainer}>
         
         <div className={styles.resourcesBody}>

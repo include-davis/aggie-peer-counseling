@@ -2,12 +2,13 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import NavHamburger from './menu';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 const Navbar = () => {
-    const pathname = usePathname(); 
+    const pathname = usePathname();
+    const router = useRouter();
 
     const routeStyles = {
         "/home": styles["navbar-morning"],
@@ -17,6 +18,15 @@ const Navbar = () => {
     };
 
     const colorClass = routeStyles[pathname] || "";
+
+    const handleClick = () => {
+        if (pathname === '/') {
+            document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            router.push('/#program'); // Navigate without animation
+        }
+    };
+
 
     return (
         <nav className={`${styles.navbar} ${colorClass}`}>
@@ -34,7 +44,7 @@ const Navbar = () => {
                     <Link href="/">About Us</Link>
                 </li>
                 <li className={styles["nav-link"]}>
-                    <a href="#program">Program</a>
+                    <a onClick={handleClick} style={{ cursor: 'pointer' }}>Program</a>
                 </li>
                 <li className={styles["nav-link"]}>
                     <Link href="/resources">Resources</Link>

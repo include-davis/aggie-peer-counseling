@@ -1,5 +1,8 @@
 import styles from "./page.module.scss";
 import Hero from "../_components/common/Hero/Hero";
+import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
+import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
+import MeetTheMentors from "../_components/home/MeetTheMentors/MeetTheMentors"
 import Program from "../_components/home/Program/Program";
 import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
 import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
@@ -14,6 +17,7 @@ export default function Home() {
       <EmergencyContact />
       <WhatWeDo />
       <Program />
+      <MeetTheMentors></MeetTheMentors>
       <h1>home</h1>
       <p></p>
     </main>

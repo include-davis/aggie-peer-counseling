@@ -4,8 +4,7 @@ import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
 import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
 import MeetTheMentors from "../_components/home/MeetTheMentors/MeetTheMentors"
 import Program from "../_components/home/Program/Program";
-import EmergencyContact from "../_components/home/EmergencyContact/EmergencyContact";
-import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
+import FormsSection from "../_components/home/FormsSection/FormsSection";
 
 export default function Home() {
   return (
@@ -18,6 +17,7 @@ export default function Home() {
       <WhatWeDo />
       <Program />
       <MeetTheMentors></MeetTheMentors>
+      <FormsSection />
       <h1>home</h1>
       <p></p>
     </main>

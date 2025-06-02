@@ -20,9 +20,12 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${colorClass}`}>
-            {pathname !== "/contact" && (
-                <img src="/images/header/logo.svg" alt="Logo" className={styles["nav-logo"]} />
-            )}
+            <img 
+                src="/images/header/logo.svg" 
+                alt="Logo" 
+                className={styles["nav-logo"]} 
+                style={{opacity: pathname=="/contact" ? 0 : 1}} 
+            />
 
             <NavHamburger className={styles.hamburger} />
 

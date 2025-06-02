@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from "./FormsSection.module.scss";
 
 const forms = [
-    {text: "Intake Form", imagePath: "./images/FormsSection/form1.svg", link: "https://youtube.com/"},
+    {text: "Intake Form", imagePath: "./images/FormsSection/form1.svg", link: "https://docs.google.com/forms/d/e/1FAIpQLSfrshaspip0QFXMtyzkZzAnKprOvNiQ560dB3LoSYWgz6kGBA/viewform"},
     {text: "Mentor Preference", imagePath: "./images/FormsSection/form2.svg", link: "https://roblox.com/"},
     {text: "Mentor Applications", imagePath: "./images/FormsSection/form3.svg", link: "https://google.com/"}
 ]

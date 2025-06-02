@@ -1,12 +1,19 @@
 "use client";
 import styles from "./page.module.scss";
+import Hero from "../_components/common/Hero/Hero";
 import ResourceCard from "@/app/(pages)/_components/resources/ResourceCard/ResourceCard";
 import Directory from "@/app/(pages)/_components/resources/Directory/Directory";
 import { cards } from "./resourcesData"
 
+
 export default function Home() {
   return (
     <main className={styles.page}>
+      <Hero
+        backgroundImage="/images/noon2.png"
+        title="Resources"
+        subtitle="Support made just for you"
+      />
       <h1>Header 1</h1>
       <p>body</p>
 

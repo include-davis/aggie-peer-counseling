@@ -13,6 +13,7 @@ const Hero = ({ title, subtitle }) => {
     pathname=="/" && styles.morning,
     pathname=="/resources" && styles.noon,
     pathname=="/destress" && styles.night,
+    pathname=="/contact" && styles.spring,
   );
 
   return (

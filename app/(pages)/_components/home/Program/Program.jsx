@@ -3,7 +3,7 @@ import styles from './Program.module.scss';
 
 export default function Program() {
   return (
-    <section className={styles.programSection}>
+    <section className={styles.programSection} id="program">
       <h1 className={styles.title}>Mentor Mentee Program</h1>
       <div className={styles.cardContainer}>
         <div className={styles.card}>
@@ -12,20 +12,20 @@ export default function Program() {
             Mentors lead, encourage, and support a small group of 3–5 mentees.
           </p>
           <ul>
-            <div>
-  <strong>Requirements:</strong>
-  <ul>
-    <li>Active UCD student, 2nd year or above</li>
-    <li>Attend 3 mandatory in-person meetings</li>
-    <li>Complete online training</li>
-  </ul>
-</div>
-            <div>
-  <strong>Role:</strong>
-  <ul>
-    <li>Weekly check-ins, respond promptly to messages from mentees, present mental health topics, attend 80% of meetings</li>
-  </ul>
-</div>
+            <div className={styles.bulletsDiv}>
+              <strong>Requirements:</strong>
+              <ul>
+                <li>Active UCD student, 2nd year or above</li>
+                <li>Attend 3 mandatory in-person meetings</li>
+                <li>Complete online training</li>
+              </ul>
+            </div>
+            <div className={styles.bulletsDiv}>
+              <strong>Role:</strong>
+              <ul>
+                <li>Weekly check-ins, respond promptly to messages from mentees, present mental health topics, attend 80% of meetings</li>
+              </ul>
+            </div>
           </ul>
         </div>
 

@@ -20,13 +20,15 @@
 .card {
     background: #ffffff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px 30px;
     //width: 100%;
     text-align: left;
     width: 423.37px;
-    height: 301.3px;
     flex-shrink: 0;
 
+    font-family: 'Jua';
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .card h2 {
@@ -38,8 +40,8 @@
     padding-left: 20px;
 }
 
-.card li {
-    margin-bottom: 10px;
+.bulletsDiv {
+    padding-top: 20px;
 }
 
 @media (max-width: 768px) {

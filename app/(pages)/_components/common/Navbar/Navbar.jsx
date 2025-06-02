@@ -3,6 +3,8 @@ import React from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import NavHamburger from './menu';
+
 
 const Navbar = () => {
     const pathname = usePathname(); 
@@ -18,12 +20,11 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${colorClass}`}>
-            <div className={styles["nav-logo"]}>
-                {}
-                {pathname !== "/contact" && (
-                    <img src="/images/logo.svg" alt="Logo" />
-                )}
-            </div>
+            {pathname !== "/contact" && (
+                <img src="/images/header/logo.svg" alt="Logo" className={styles["nav-logo"]} />
+            )}
+
+            <NavHamburger className={styles.hamburger} />
 
             <ul className={styles["nav-links"]}>
                 <li className={styles["nav-link"]}>

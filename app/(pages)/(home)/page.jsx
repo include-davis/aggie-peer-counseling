@@ -4,17 +4,14 @@ import Program from "../_components/home/Program/Program";
 
 export default function Home() {
   return (
-    <>
-    <Hero
-        backgroundImage="/images/morning.png"
+    <main className={styles.page}>
+      <Hero
         title="Aggie Peer Counseling"
         subtitle="Here for you, Rain or Shine"
       />
-    <Program />
-    <main className={styles.page}>
+      <Program />
       <h1>home</h1>
       <p></p>
     </main>
-    </>
   );
 }

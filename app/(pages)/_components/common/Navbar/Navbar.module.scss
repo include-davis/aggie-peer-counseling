@@ -15,11 +15,19 @@
 
 
 .nav-logo {
-        width: 6.37rem;
-        height: 5.563rem;
-        flex-shrink: 0;
-        aspect-ratio: 101.92/89.00;
+    width: 6.37rem;
+    height: 5.563rem;
+    aspect-ratio: 101.92/89.00;
+
+    @include tablet {
+        height: 70px;
     }
+
+    @include sm-phone {
+        height: 45px;
+    }
+}
+
 .nav-contact {
     a {
         width: 7.375rem;
@@ -44,6 +52,10 @@
     display: flex;
     gap: 2rem;
     list-style: none;
+
+    @include tablet {
+        display: none;
+    }
 
     .nav-link {
         a {
@@ -88,4 +100,37 @@
 .navbar-night .nav-contact a {
     background-color: var(--night-moon);
     color: var(--black);
+}
+
+.hamburgerDiv {
+    display: none;
+    position: relative;
+    padding-right: 20px;
+    
+    @include tablet {
+        display: block;
+    }
+}
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+}
+
+.menuLinks {
+    position: absolute;
+    right: -10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    background-color: rgba(23, 23, 23, 0.726);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.menuLink {
+    color: white;
 }

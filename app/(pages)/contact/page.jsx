@@ -3,16 +3,13 @@ import Hero from "../_components/common/Hero/Hero";
 
 export default function Home() {
   return (
-    <>
-    <Hero
-        backgroundImage="/images/contact2.png"
+    <main className={styles.page}>
+      <Hero
         title=""
         subtitle=""
       />
-    <main className={styles.page}>
       <h1>Contact</h1>
       <p></p>
     </main>
-    </>
   );
 }

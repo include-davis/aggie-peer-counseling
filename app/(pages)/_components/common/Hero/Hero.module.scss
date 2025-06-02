@@ -1,7 +1,8 @@
+
 .hero {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 982.8px;
     margin-top: -6.875rem; // pull hero up behind the navbar
     padding-top: 12.5rem; // prevent text from hiding behind navbar
     display: flex;
@@ -10,45 +11,96 @@
     justify-content: flex-start;
     text-align: center;
     padding-bottom: 13.75rem;
+
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }
 
- .bgImage {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: auto;
+ .morning {
+    background-image: url('/images/header/morning.svg');
+    background-color: #B1D2EF;
+    background-size: max(1300px, 100%) auto, cover;
+    @include sm-phone {
+        background-image: url('/images/header/mobile_home.svg');
+        background-size: contain, cover;
+    }
+ }
+
+ .noon {
+    background-image: 
+        url('/images/header/noon.svg'),
+        linear-gradient(#FFC480, #FEE47B);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center, top;
+    background-size: max(1300px, 100%) auto, cover;
+    @include sm-phone {
+        background-image: 
+            url('/images/header/mobile_resources.svg'),
+            linear-gradient(#FFC480, #FEE47B);
+        background-size: contain, cover;
+    }
+ }
+
+ .night {
+    background-image: 
+        url('/images/header/night.svg'),
+        linear-gradient(#1E3666, #3C6CCC);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center, top;
+    background-size: max(1300px, 100%) auto, cover;
+    @include sm-phone {
+        background-image: 
+            url('/images/header/mobile_destress.svg'),
+            linear-gradient(#1E3666, #3C6CCC);
+        background-size: contain, cover;
+    }
  }
 
  .content {
-     position: relative;
-     //z-index: 1;
-     text-align: center;
-     color: var(--white);
-     padding: 2rem;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 1.5rem;
+    position: relative;
+    //z-index: 1;
+    text-align: center;
+    color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 254px;
+    gap: 1.5rem;
  }
 
  .h1 {
-     color: var(--white);
-     -webkit-text-stroke-width: 1px;
-     -webkit-text-stroke-color: #FFF;
-     font-family: 'JejuMyeongjo';
-     font-size: 6rem;
-     font-style: normal;
-     font-weight: 400;
-     line-height: normal;
+    color: var(--white);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+    font-family: 'JejuMyeongjo';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include tablet {
+        font-size: 3rem;
+    }
+
+    @include sm-phone {
+        font-size: 2rem;
+    }
  }
 
  .p {
-     color: var(--white);
-     font-family: 'Jua';
-     font-size: 2.363rem;
-     font-style: normal;
-     font-weight: 400;
-     line-height: normal;
+    color: var(--white);
+    font-family: 'Jua';
+    font-size: 2.363rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+
+    @include sm-phone {
+        font-size: 1.25rem;
+    }
  }

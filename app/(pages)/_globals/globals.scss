@@ -2,6 +2,7 @@
 
 @import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Coming+Soon&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 :root {
   // Common Colors
@@ -17,6 +18,7 @@
   --day-cloud: #C9E9FF;
   --day-rose: #E2A7AF;
   --day-sun: #FFF2C9;
+  --day-grass: #76AF7A;
 
   // Resources Page / Sunset Theme
   --sunset-forest: #678B64;
@@ -26,6 +28,8 @@
   --sunset-sand: #FEE5BE;
   --sunset-peach: #FFD5A5;
   --sunset-honey: #FFE7C0;
+  --sunset-milk: #FCF1D1;
+  --sunset-orange: #F6992F;
 
   // De-Stress / Night Theme
   --night-ocean: #4E6F98;
@@ -35,6 +39,10 @@
   --night-moon: #F4DA9D;
   --night-candle: #DDB087;
   --night-dream: #B8B7E8;
+
+  // Contact Page
+  --sunrise-sage: #A9BFA0;
+  --sunrise-smoke: #393030;
 
   // Brand Gradient
   --aggie-gradient: linear-gradient(200deg, #04164F 7.1%, #3D1069 62.03%, #750B83 94.99%);
@@ -50,6 +58,7 @@ body {
   background-color: var(--white);
   font-family: 'JejuMyeongjo', serif;
   color: var(--black);
+
 }
 
 h1 {

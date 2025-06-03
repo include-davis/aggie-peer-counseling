@@ -13,12 +13,7 @@ const QuoteBanner = ({ bannerNumber }) => {
   );
 
   return (
-    <div className={styles.banner}>
-      <img
-        src={`${basePath}/background.svg`}
-        alt="background"
-        className={styles.background}
-      />
+    <div className={[styles.banner, isBanner1 ? styles.background1 : styles.background2].join(' ')}>
       {isBanner1 ? <p className={styles.text}>Sometimes the most productive thing you can do is relax and recharge</p> :  <p className={styles.text}>You are worthy of happiness and peace of mind</p>}
     </div>
   );

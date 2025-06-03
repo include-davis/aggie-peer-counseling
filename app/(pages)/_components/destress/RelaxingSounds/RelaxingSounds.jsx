@@ -62,10 +62,10 @@ export default function RelaxingSounds() {
                 >
                     <MusicCard imagePath="rain" altText="Rain" />
                     <MusicCard imagePath="piano" altText="Piano" />
-                    <MusicCard imagePath="ocean" altText="Ocean" />
-                    <MusicCard imagePath="forest" altText="Forest" />
-                    <MusicCard imagePath="fire" altText="Fire" />
-                    <MusicCard imagePath="waves" altText="Waves" />
+                    <MusicCard imagePath="Ocean" altText="Ocean" />
+                    <MusicCard imagePath="rain" altText="Forest" />
+                    <MusicCard imagePath="piano" altText="Fire" />
+                    <MusicCard imagePath="Ocean" altText="Waves" />
                 </div>
                 <Image
                     src="/images/destress_relaxing_sounds/rightScroll.svg"

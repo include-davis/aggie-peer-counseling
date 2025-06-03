@@ -1,8 +1,15 @@
 @use './mixins.scss';
 
-@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Coming+Soon&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+// @import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
+// @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Coming+Soon&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@font-face {
+  font-family: 'JejuMyeongjo';
+  src: url('/fonts/JejuMyeongjo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   // Common Colors

@@ -1,6 +1,8 @@
 import styles from "./page.module.scss";
 import Breathe from "../_components/destress/Breathe/Breathe";
 import Hero from "../_components/common/Hero/Hero";
+import RelaxingSounds from "../_components/destress/RelaxingSounds/RelaxingSounds.jsx";
+
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         subtitle="Breath, relax, reset"
       />
       <Breathe />
+      <RelaxingSounds/>
+      <p></p>
     </main>
   );
 }

@@ -1,6 +1,35 @@
+"use client";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+// import "./Breathe.modules.scss";
+import styles from "./Breathe.module.scss"
+import Background from "@/public/images/destress/breathe.svg";
+
 export default function Breathe() {
-    return (
-        <div>
-        </div>
-    )
+  const [angle, setAngle] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAngle((prev) => (prev >= 360 ? 0 : prev + 1));
+    }, 20);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className={styles.breatheWrapper}>
+    
+      <div className={styles.circleContainer}>
+        <div className={styles.outerCircle}></div>
+        <div
+          className={styles.timerRing}
+          style={{
+            background: `conic-gradient(#6F8EBC ${angle}deg, transparent ${angle}deg)`,
+          }}  
+        ></div>
+        <div className={styles.innerCircle}></div>
+        <h2 className={styles.breatheText}>breathe</h2>
+      </div>
+
+    </div>
+  );
 }

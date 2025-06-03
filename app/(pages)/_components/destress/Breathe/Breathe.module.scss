@@ -1,31 +1,39 @@
 @use 'app/(pages)/_globals/mixins.scss';
-
 .breatheWrapper {
-    margin: 0;
-  padding: 0;
-  background-color: #225A7F;
-  position: relative;
   width: 100vw;
-  height: 38rem; // desktop
+  min-height: 100vh; // ensure full screen
   overflow: hidden;
+  background-color: #225A7F;
+  background-image: url('/images/destress/breathe-cropped.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-image: url('/images/destress/breathe.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
   @include mixins.phone {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('/images/destress/breathemobile.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    background: none;
+    padding: 0;
+    overflow-y: auto;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100vw;
+      aspect-ratio: 720 / 1100;
+      background-image: url('/images/destress/breathemobile.svg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center -4px; 
+    }
   }
 }
+
 
 .circleContainer {
   position: relative;
@@ -35,11 +43,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mixins.phone {
+    position: absolute;
+    top: 40%; // You can fine-tune this if needed
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16.56rem;
+    height: 16.56rem;
+  }
 }
 
 .outerCircle {
-  width: 22rem;
-  height: 22rem;
+  width: 25rem;
+  height: 25rem;
   flex-shrink: 0;
   position: absolute;
   border-radius: 50%;
@@ -54,8 +71,8 @@
 }
 
 .timerRing {
-  width: 22rem;
-  height: 22rem;
+  width: 25rem;
+  height: 25rem;
   flex-shrink: 0;
   position: absolute;
   top: 50%;
@@ -64,7 +81,7 @@
   border-radius: 50%;
   z-index: 3;
 
-    @include mixins.phone {
+  @include mixins.phone {
     width: 30rem;
     height: 30rem;
     flex-shrink: 0;
@@ -72,8 +89,8 @@
 }
 
 .innerCircle {
-  width: 16rem;
-  height: 16rem;
+  width: 20rem;
+  height: 20rem;
   flex-shrink: 0;
   position: absolute;
   top: 50%;
@@ -82,7 +99,7 @@
   background: #DBE5ED;
   border-radius: 50%;
   z-index: 4;
-  animation: pulse 3s infinite ease-in-out;
+  animation: pulse 6s infinite ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,130 +130,11 @@
   }
 }
 
-
 @keyframes pulse {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
-
-// .breatheWrapper {
-//     margin: 0;
-//   padding: 0;
-//   background-color: #225A7F;
-//   height: 100vh;
-//   overflow: hidden;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   position: relative;
-//   width: 100vw;
-//   height: 38rem; // desktop
-//   overflow: hidden;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   background-image: url('/images/destress/breathe.svg');
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-
-//   @include mixins.phone {
-//     height: 100vh;
-//     width: 100vw;
-//     background-image: url('/images/destress/breathemobile.svg');
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//   }
-// }
-
-// .circleContainer {
-//   position: relative;
-//   width: 300px;
-//   height: 300px;
-//   z-index: 1;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .outerCircle {
-//   width: 22rem;
-//   height: 22rem;
-//   flex-shrink: 0;
-//   position: absolute;
-//   border-radius: 50%;
-//   background: #A9BED1;
-//   z-index: 1;
-
-//   @include mixins.phone {
-//     width: 30rem;
-//     height: 30rem;
-//     flex-shrink: 0;
-//   }
-// }
-
-// .timerRing {
-//   width: 22rem;
-//   height: 22rem;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   border-radius: 50%;
-//   z-index: 2;
-
-//   @media (max-width: 768px) {
-//     width: 30rem;
-//     height: 30rem;
-//   }
-// }
-
-// .innerCircle {
-//   width: 16rem;
-//   height: 16rem;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background: #DBE5ED;
-//   border-radius: 50%;
-//   z-index: 3;
-//   animation: pulse 3s infinite ease-in-out;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   @media (max-width: 768px) {
-//     width: 20rem;
-//     height: 20rem;
-//   }
-// }
-
-// .breatheText {
-//   font-size: 1.5rem;
-//   color: #000;
-//   font-weight: bold;
-//   text-align: center;
-//   z-index: 4;
-//   margin: 0;
-
-//   @media (max-width: 768px) {
-//     font-size: 2rem;
-//   }
-// }
-
-// @keyframes pulse {
-//   0%, 100% {
-//     transform: translate(-50%, -50%) scale(1);
-//   }
-//   50% {
-//     transform: translate(-50%, -50%) scale(1.15);
-//   }
-// }

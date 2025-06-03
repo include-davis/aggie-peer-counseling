@@ -16,7 +16,9 @@ export default function Envelope() {
             <div className={styles.logosWrapper}>
                 <div className={styles.logoWrapper}>
                     <div className={styles.logobubble} onClick={() => (window.open("https://www.instagram.com/aggiepeercounseling/", 'blank', 'noopener,noreferrer'))}> 
-                        <FaInstagram size="2.5rem" color="white" />
+                        <div className={styles.logoSize}>
+                            <FaInstagram color="white" />
+                        </div>
                     </div>
                     <h2 className={styles.subtext}>
                         aggiepeercounseling
@@ -24,7 +26,9 @@ export default function Envelope() {
                 </div>
                 <div className={styles.logoWrapper}>
                     <div className={styles.logobubble} onClick={() => (window.open("mailto:aggiepeercounseling@gmail.com", 'blank', 'noopener,noreferrer'))}> 
-                        <FiMail size="2.4rem" color="white" />
+                        <div className={styles.logoSize}>
+                            <FiMail color="white" />    
+                        </div>
                     </div>
                     <h2 className={styles.subtext}>
                         aggiepeercounseling@gmail.com

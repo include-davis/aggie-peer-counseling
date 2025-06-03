@@ -73,7 +73,7 @@ export default function Footer({variant = "Home"}) {
                 {footerSections.map((section,index) => (
                     <div key={index} className={styles.FooterColumn}>
                         <h2><a href={section.href}>{section.heading}</a></h2>
-                        <ul>
+                        <ul className={styles.links}>
                             {section.links.map((link,i) => (
                                 <li key={i}>
                                     <a href={link.href}>{link.text}</a>

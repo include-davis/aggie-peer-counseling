@@ -1,4 +1,6 @@
 import styles from "./EmergencyContact.module.scss";
+import { FiPhoneCall } from "react-icons/fi";
+import { BsChatDots } from "react-icons/bs";
 
 export default function EmergencyContact() {
   return (
@@ -8,6 +10,7 @@ export default function EmergencyContact() {
         {/* phone SOS */}
         <a href="tel:911" className={styles.iconLink}>
           <div className={styles.iconWrapper}>
+            <FiPhoneCall className={styles.icon} />
             <span className={styles.label}>SOS</span>
           </div>
         </a>
@@ -15,6 +18,7 @@ export default function EmergencyContact() {
         {/* Chat 988 */}
         <a href="sms:988" className={styles.iconLink}>
           <div className={styles.iconWrapper}>
+            <BsChatDots className={styles.icon} />
             <span className={styles.label}>988</span>
           </div>
         </a>

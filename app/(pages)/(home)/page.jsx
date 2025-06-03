@@ -7,6 +7,7 @@ import MeetTheMentors from "../_components/home/MeetTheMentors/MeetTheMentors"
 import Program from "../_components/home/Program/Program";
 import FormsSection from "../_components/home/FormsSection/FormsSection";
 import Footer from "../_components/common/Footer/Footer";
+import Mission from "../_components/home/Mission/Mission.jsx";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         subtitle="Here for you, Rain or Shine"
       />
       <EmergencyContact />
+      <Mission />
       <WhatWeDo />
       <Program />
       <MeetTheMentors></MeetTheMentors>

@@ -1,18 +1,14 @@
+import styles from "./Mission.module.scss"
+
 export default function Mission() {
     return (
-        <section className={StyleSheet.MissionSection}>
-            {/* Background*/}
-            <img 
-            src= "/images/MissionBg.svg"
-            alt = ""
-            className={StyleSheet.MissionBackground} aria-hiden="true"/> 
-
+        <section className={styles.MissionSection}>
             <div className={styles.MissionContent}>
-                <div className={styles.MissionCard}>
-                    <img 
-                    src="/images/LogoMain.svg"
-                    alt="Aggie Peer Counselling Logo"/>
-                </div>
+                <img 
+                    src="/images/LogoMissionMobile.svg"
+                    alt="Aggie Peer Counselling Logo"
+                    className={styles.MissionCard}
+                />
 
                 <div className={styles.MissionText}>
                     <h1>Our Mission</h1>

@@ -1,19 +1,5 @@
-@import url(https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo);
-
-@font-face {
-    font-family: "JejuMyeongjo";
-    src: url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.eot");
-    src: url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/1a5c2d8bbd4e28d99a6efcbb9a5b378f.svg#JejuMyeongjo")format("svg");
-}
-
+@use "@/app/(pages)/_globals/mixins.scss";
 .background {
-    position: fixed; /* Makes the background cover the entire viewport */
-    top: 0;
-    left: 0;
     width: 100vw; /* Full width of the viewport */
     height: 100vh; /* Full height of the viewport */
     background-image: url("/images/destress_relaxing_sounds/Music_Section.png");
@@ -29,9 +15,7 @@
 }
 .title {
     font-size: 3.125rem; /* 50px / 16 = 3.125rem */
-    font-family: 'JejuMyeongjo', Times, serif; /* Correct font-family name */
-    font-style: normal;
-    font-weight: 400;
+    @include mixins.fontStyle(3.125rem, 400, normal,JejuMyeongjo);
     line-height: normal;
     margin-top: -100px;   /* 109px / 16 = 6.8125rem */
     margin-bottom: 6.125rem; /* 98px / 16 = 6.125rem */

@@ -60,12 +60,12 @@ export default function RelaxingSounds() {
                     className={styles.cardsTrack}
                     onScroll={checkScrollPosition}
                 >
-                    <MusicCard imagePath="rain" altText="Rain sound" />
-                    <MusicCard imagePath="piano" altText="Piano sound" />
-                    <MusicCard imagePath="ocean" altText="Ocean sound" />
-                    <MusicCard imagePath="forest" altText="Forest sound" />
-                    <MusicCard imagePath="fire" altText="Fire sound" />
-                    <MusicCard imagePath="waves" altText="Waves sound" />
+                    <MusicCard imagePath="rain" altText="Rain" />
+                    <MusicCard imagePath="piano" altText="Piano" />
+                    <MusicCard imagePath="ocean" altText="Ocean" />
+                    <MusicCard imagePath="forest" altText="Forest" />
+                    <MusicCard imagePath="fire" altText="Fire" />
+                    <MusicCard imagePath="waves" altText="Waves" />
                 </div>
                 <Image
                     src="/images/destress_relaxing_sounds/rightScroll.svg"

@@ -3,16 +3,29 @@
 .envelope {
     background-image: url('/images/contact_envelope.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 44.1875rem;
-    height: 44.75rem;
+    background-size: contain;
+    background-position: center;
+    
+    width: 699px;
+    height: 701px;
+    position: absolute;
+    top: 112px;
+    right: 156px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 130px;
+
     @include mixins.tablet {
         width: 26.5125rem;
         height: 26.85rem;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        right: none;
+        transform: translateX(-50%);
+        padding-top: 80px;
     }
 }
 
@@ -21,7 +34,7 @@
     color: var(--sunrise-smoke) !important; 
     text-align: center;
     letter-spacing: .1rem;
-    margin-bottom: .75rem;
+    margin-bottom: 5px;
     @include mixins.tablet {
         @include mixins.fontStyle(1.875rem, 400, normal, 'Playfair');
         letter-spacing: .06rem;
@@ -68,6 +81,7 @@
 .logoWrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-left: 2rem;
     @include mixins.tablet {

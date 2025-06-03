@@ -1,3 +1,4 @@
+import ExerciseSection from "../_components/destress/ExerciseSection/ExerciseSection.jsx";
 import styles from "./page.module.scss";
 import Hero from "../_components/common/Hero/Hero";
 import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";

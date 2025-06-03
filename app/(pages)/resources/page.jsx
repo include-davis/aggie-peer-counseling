@@ -4,6 +4,7 @@ import Hero from "../_components/common/Hero/Hero";
 import ResourceCard from "@/app/(pages)/_components/resources/ResourceCard/ResourceCard";
 import Directory from "@/app/(pages)/_components/resources/Directory/Directory";
 import { cards } from "./resourcesData"
+import Footer from "../_components/common/Footer/Footer";
 
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer variant="Resources" />
     </main>
   );
 }

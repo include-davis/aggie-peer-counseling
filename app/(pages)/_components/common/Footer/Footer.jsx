@@ -65,7 +65,7 @@ export default function Footer({variant = "Home"}) {
                 <div className={styles.Footer}> 
                 {/* Main footer section w/ mission & logo*/}
                     <div className={styles.FooterMain}>
-                        <h1>Aggie Peer Counselling</h1>
+                        <h1>Aggie Peer Counseling</h1>
                         <p>A by-student, for-students initiative to create a safe space for conversation, encouragement, and connection.</p>
                     </div>
                     <div className={styles.FooterColumnsWrapper}>

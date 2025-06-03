@@ -1,6 +1,7 @@
 import styles from "./page.module.scss";
 import Envelope from "../_components/contact/Envelope/Envelope";
 import Hero from "../_components/common/Hero/Hero";
+import Footer from "../_components/common/Footer/Footer";
 
 export default function Home() {
   return (
@@ -10,8 +11,7 @@ export default function Home() {
         subtitle=""
       />
       <Envelope />
-      <h1>Contact</h1>
-      <p></p>
+      <Footer />
     </main>
   );
 }

@@ -2,6 +2,7 @@ import ExerciseSection from "../_components/destress/ExerciseSection/ExerciseSec
 import styles from "./page.module.scss";
 import Breathe from "../_components/destress/Breathe/Breathe";
 import Hero from "../_components/common/Hero/Hero";
+import Footer from "../_components/common/Footer/Footer";
 import RelaxingSounds from "../_components/destress/RelaxingSounds/RelaxingSounds.jsx";
 
 
@@ -15,7 +16,7 @@ export default function Home() {
       <Breathe />
       <RelaxingSounds/>
       <ExerciseSection/>
-      <p></p>
+      <Footer variant="De-Stress" />
     </main>
   );
 }

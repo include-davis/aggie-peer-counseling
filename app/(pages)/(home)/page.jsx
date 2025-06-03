@@ -6,6 +6,7 @@ import EmergencyContact from "../_components/home/EmergencyContact/EmergencyCont
 import MeetTheMentors from "../_components/home/MeetTheMentors/MeetTheMentors"
 import Program from "../_components/home/Program/Program";
 import FormsSection from "../_components/home/FormsSection/FormsSection";
+import Footer from "../_components/common/Footer/Footer";
 
 export default function Home() {
   return (
@@ -19,8 +20,7 @@ export default function Home() {
       <Program />
       <MeetTheMentors></MeetTheMentors>
       <FormsSection />
-      <h1>home</h1>
-      <p></p>
+      <Footer />
     </main>
   );
 }

@@ -1,5 +1,8 @@
 @use './mixins.scss';
 
+@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 :root {
   // Common Colors
   --white: #FFFFFF;
@@ -14,6 +17,7 @@
   --day-cloud: #C9E9FF;
   --day-rose: #E2A7AF;
   --day-sun: #FFF2C9;
+  --day-grass: #76AF7A;
 
   // Resources Page / Sunset Theme
   --sunset-forest: #678B64;
@@ -23,6 +27,8 @@
   --sunset-sand: #FEE5BE;
   --sunset-peach: #FFD5A5;
   --sunset-honey: #FFE7C0;
+  --sunset-milk: #FCF1D1;
+  --sunset-orange: #F6992F;
 
   // De-Stress / Night Theme
   --night-ocean: #4E6F98;
@@ -47,6 +53,7 @@ body {
   background-color: var(--white);
   font-family: 'JejuMyeongjo', serif;
   color: var(--black);
+
 }
 
 h1 {

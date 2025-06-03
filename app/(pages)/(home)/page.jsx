@@ -1,4 +1,3 @@
-import ExerciseSection from "../_components/destress/ExerciseSection/ExerciseSection.jsx";
 import styles from "./page.module.scss";
 import Hero from "../_components/common/Hero/Hero";
 import WhatWeDo from "../_components/home/WhatWeDo/WhatWeDo";
@@ -11,6 +10,7 @@ import Mission from "../_components/home/Mission/Mission.jsx";
 
 export default function Home() {
   return (
+    <>
     <main className={styles.page}>
       <Hero
         title="Aggie Peer Counseling"
@@ -24,5 +24,6 @@ export default function Home() {
       <FormsSection />
       <Footer />
     </main>
+    </>
   );
 }

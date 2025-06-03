@@ -5,11 +5,11 @@ import Hero from "../_components/common/Hero/Hero";
 export default function Home() {
   return (
     <main className={styles.page}>
-      <Envelope/>
       <Hero
         title=""
         subtitle=""
       />
+      <Envelope />
       <h1>Contact</h1>
       <p></p>
     </main>

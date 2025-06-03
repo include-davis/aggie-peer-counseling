@@ -14,6 +14,7 @@ export default function Home() {
       />
       <Breathe />
       <RelaxingSounds/>
+      <ExerciseSection/>
       <p></p>
     </main>
   );

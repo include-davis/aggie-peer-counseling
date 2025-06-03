@@ -9,6 +9,7 @@ export default function Home() {
       {/* Banner 1 - TOP */}
       <QuoteBanner bannerNumber={1} />
 
+
       {/* Banner 2 - BOTTOM */}
       <QuoteBanner bannerNumber={2} />
     </div>

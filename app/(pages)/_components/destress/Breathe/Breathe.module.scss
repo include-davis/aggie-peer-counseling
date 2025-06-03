@@ -1,40 +1,39 @@
 @use 'app/(pages)/_globals/mixins.scss';
 
-.test {
-  @include mixins.fontStyle(2rem, 700, normal, 'Jua');
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 13;
-  margin: 0;
-  color: var(--black);
-}
-
 .breatheWrapper {
-  background-image: url('/images/destress/breathe.svg');
-  background-size: cover; // This will scale the cropped image to fill the screen
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #225A7F;
   width: 100vw;
-  min-height: 100vh;
+  height: 74vh; 
+  overflow: hidden;
+  background-color: #225A7F;
+  background-image: url('/images/destress/breathe.svg');
+  background-size: cover;
+  background-position: center -10vh; 
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  // Crop 11% from top and 10% from bottom
-  clip-path: inset(11% 0 10% 0);
 
-  @include mixins.phone {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('/images/destress/breathemobile.svg');
-    background-size: cover; // Also use cover for mobile
-    background-position: center;
-    background-repeat: no-repeat;
-    clip-path: inset(0 0); // Apply same cropping to mobile
-  }
+    @include mixins.phone {
+      position: relative;
+      height: auto;
+      min-height: 100vh;
+      background: none;
+      padding: 0;
+      overflow-y: auto;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100vw;
+        aspect-ratio: 720 / 1100;
+        background-image: url('/images/destress/breathemobile.svg');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center -4px; 
+      }
+    }
+
 }
 
 .circleContainer {
@@ -45,11 +44,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mixins.phone {
+    position: absolute;
+    top: 40%; // You can fine-tune this if needed
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16.56rem;
+    height: 16.56rem;
+  }
 }
 
 .outerCircle {
-  width: 22rem;
-  height: 22rem;
+  width: 25rem;
+  height: 25rem;
   flex-shrink: 0;
   position: absolute;
   border-radius: 50%;
@@ -64,8 +72,8 @@
 }
 
 .timerRing {
-  width: 22rem;
-  height: 22rem;
+  width: 25rem;
+  height: 25rem;
   flex-shrink: 0;
   position: absolute;
   top: 50%;
@@ -82,8 +90,8 @@
 }
 
 .innerCircle {
-  width: 16rem;
-  height: 16rem;
+  width: 20rem;
+  height: 20rem;
   flex-shrink: 0;
   position: absolute;
   top: 50%;
@@ -92,7 +100,7 @@
   background: #DBE5ED;
   border-radius: 50%;
   z-index: 4;
-  animation: pulse 3s infinite ease-in-out;
+  animation: pulse 6s infinite ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,6 +136,6 @@
     transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }

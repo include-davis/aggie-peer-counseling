@@ -1,8 +1,6 @@
 .pageContainer {
-  background-image: url('/images/blueBackground.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--night-ocean); 
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -181,19 +179,6 @@
   &:hover {
     transform: translateY(-5px);
   }
-}
-
-.pageContainer {
-  background-image: url('/images/blueBackground.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
 }
 
 .starsContainer {

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import styles from './ExerciseSection.module.scss';
+import stars from '@/public/images/destress/ExercisePage/Stars.svg'
 
 export default function ExerciseSection() {
   const exercises = [
@@ -40,28 +41,28 @@ export default function ExerciseSection() {
     setOpenDropdowns(prev => prev.map((isOpen, i) => (i === index ? !isOpen : isOpen)));
   };
 
-  useEffect(() => {
-    const starsContainer = document.createElement('div');
-    starsContainer.className = styles.starsContainer;
-    document.body.appendChild(starsContainer);
+  // useEffect(() => {
+  //   const starsContainer = document.createElement('div');
+  //   starsContainer.className = styles.starsContainer;
+  //   document.body.appendChild(starsContainer);
 
-    const totalStars = 20;
-    for (let i = 0; i < totalStars; i++) {
-      const starImg = document.createElement('img');
-      starImg.src = i % 2 === 0 ? "/images/strongElipse.png" : "/images/weakElipse.png";
-      starImg.className = styles.starImage;
-      starImg.style.left = `${Math.random() * 100}%`;
-      starImg.style.top = `${Math.random() * 100}%`;
-      starImg.style.width = `${Math.random() * 15 + 15}px`;
-      starImg.style.height = starImg.style.width;
-      starImg.style.animationDelay = `${Math.random() * 3}s`;
-      starsContainer.appendChild(starImg);
-    }
+  //   const totalStars = 20;
+  //   for (let i = 0; i < totalStars; i++) {
+  //     const starImg = document.createElement('img');
+  //     starImg.src = i % 2 === 0 ? "/images/strongElipse.png" : "/images/weakElipse.png";
+  //     starImg.className = styles.starImage;
+  //     starImg.style.left = `${Math.random() * 100}%`;
+  //     starImg.style.top = `${Math.random() * 100}%`;
+  //     starImg.style.width = `${Math.random() * 15 + 15}px`;
+  //     starImg.style.height = starImg.style.width;
+  //     starImg.style.animationDelay = `${Math.random() * 3}s`;
+  //     starsContainer.appendChild(starImg);
+  //   }
 
-    return () => {
-      document.body.removeChild(starsContainer);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(starsContainer);
+  //   };
+  // }, []);
 
   const renderGrassImages = () => {
     const grassImages = [];
@@ -72,7 +73,7 @@ export default function ExerciseSection() {
       grassImages.push(
         <img 
           key={i}
-          src={`/images/ExercisePageGrass/ExercisePageGrass/Union-${imageNum}.png`}
+          src={`images/destress/ExercisePage/ExercisePageGrass/Union-${imageNum}.png`}
           className={styles.grassImage} 
           style={{ 
             left: `${position}%`, 

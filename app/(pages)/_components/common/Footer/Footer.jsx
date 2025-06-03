@@ -9,14 +9,14 @@ import { FaInstagram } from "react-icons/fa"; // Importing icon from react-icons
 export default function Footer({variant = "Home"}) {
 
     let footerBg = styles.HomeFooter; // Default background (Home & Contact)
-    let footerImg = "/HomeBg.png"; // Default image (Home & Contact)
+    // let footerImg = "/HomeBg.svg"; // Default image (Home & Contact)
 
     if (variant == "Resources") {
         footerBg = styles.ResourcesFooter;
-        footerImg = "/ResourcesBg.png";
+        // footerImg = "/ResourcesBg.svg";
     } else if (variant === "De-Stress") {
         footerBg = styles.DeStressFooter;
-        footerImg = "/DeStressBg.png"; 
+        // footerImg = "/DeStressBg.svg"; 
     } 
 
     {/* Array of all sections for the footer, left to right */}
@@ -60,36 +60,32 @@ export default function Footer({variant = "Home"}) {
     ];
     // Rendering the footer component 
     return (
-        <footer className={`${styles.FooterContainer} ${footerBg}`} // background
-            style={{backgroundImage: `url(${footerImg})`}}> 
-            <div className={styles.Footer}> 
-            {/* Footer section with links */}
-            {footerSections.map((section,index) => (
-                <div key={index} className={styles.FooterColumn}>
-                    <h2><a href={section.href}>{section.heading}</a></h2>
-                    <ul>
-                        {section.links.map((link,i) => (
-                            <li key={i}>
-                                <a href={link.href}>{link.text}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </div> 
-            ))}
-            </div>
-            <div>
+        <>
+            <footer className={`${styles.FooterContainer} ${footerBg}`}>
+                <div className={styles.Footer}> 
                 {/* Main footer section w/ mission & logo*/}
-                <div className={styles.FooterMain}>
-                    <h1>Aggie Peer Counselling</h1>
-                    <p>A by-student, for-students initiative to create a safe space for conversation, encouragement, and connection.</p>
-                    {/* Not sure if I was supposed to use img or image */}
-                    <img
-                        src='FooterLogo.png'
-                        alt='Aggie Peer Counseling Logo'
-                        className={styles.FooterLogo}
-                    />
+                    <div className={styles.FooterMain}>
+                        <h1>Aggie Peer Counselling</h1>
+                        <p>A by-student, for-students initiative to create a safe space for conversation, encouragement, and connection.</p>
+                    </div>
+                    <div className={styles.FooterColumnsWrapper}>
+                {/* Footer section with links */}
+                {footerSections.map((section,index) => (
+                    <div key={index} className={styles.FooterColumn}>
+                        <h2><a href={section.href}>{section.heading}</a></h2>
+                        <ul>
+                            {section.links.map((link,i) => (
+                                <li key={i}>
+                                    <a href={link.href}>{link.text}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div> 
+                ))}
+                    </div>
                 </div>
-            </div>
+            </footer>
+
             {/* Footer's Footer */}
             <div className={styles.FooterBottom}>
                 <p><FaRegCopyright/> 2025 Aggie Peer Counselling</p>
@@ -98,6 +94,6 @@ export default function Footer({variant = "Home"}) {
                     <a href='#' target="_blank" rel='noopener noreferrer'> <FaInstagram/></a>
                 </div>
             </div>
-        </footer>
+        </>
     );
 }

@@ -5,6 +5,7 @@ export default function Home() {
     <main className={styles.page}>
       <h1>header 1</h1>
       <p>body</p>
+      
     </main>
   );
 }

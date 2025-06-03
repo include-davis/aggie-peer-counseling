@@ -15,37 +15,11 @@ const QuoteBanner = ({ bannerNumber }) => {
   return (
     <div className={styles.banner}>
       <img
-        src={`${basePath}/background.png`}
+        src={`${basePath}/background.svg`}
         alt="background"
         className={styles.background}
       />
-      {isBanner1 && (
-        <img
-          src={`${basePath}/stars.png`}
-          alt="stars"
-          className={styles.stars}
-        />
-      )}
-      {!isBanner1 && (
-        <img
-          src={`${basePath}/star.png`}
-          alt="star"
-          className={styles.singleStar}
-        />
-      )}
-      <img
-        src={`${basePath}/text.png`}
-        alt="text"
-        className={styles.text}
-      />
-      {vectors.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`vector${index + 1}`}
-          className={`${styles.vector} ${styles[`vector${index + 1}`]}`}
-        />
-      ))}
+      {isBanner1 ? <p className={styles.text}>Sometimes the most productive thing you can do is relax and recharge</p> :  <p className={styles.text}>You are worthy of happiness and peace of mind</p>}
     </div>
   );
 };

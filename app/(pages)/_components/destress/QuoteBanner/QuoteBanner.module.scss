@@ -32,41 +32,13 @@
   pointer-events: none;
 }
 
-.singleStar {
+.text {
+  width: 100%;
   position: absolute;
-  top: 5%;
-  right: 7%;
-  width: 40px;
-}
-
-.vector {
-  position: absolute;
-  width: 10%;
-  pointer-events: none;
-}
-
-.vector1 {
-  top: 5%;
-  left: 5%;
-}
-
-.vector2 {
-  top: 10%;
-  right: 10%;
-}
-
-.vector3 {
-  bottom: 15%;
-  left: 15%;
-}
-
-.vector4 {
-  bottom: 10%;
-  right: 15%;
-}
-
-.vector5 {
-  top: 45%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 30px;
 }

@@ -1,5 +1,11 @@
+import ExerciseSection from "../_components/destress/ExerciseSection/ExerciseSection.jsx";
 import styles from "./page.module.scss";
+import Breathe from "../_components/destress/Breathe/Breathe";
 import Hero from "../_components/common/Hero/Hero";
+import Footer from "../_components/common/Footer/Footer";
+import RelaxingSounds from "../_components/destress/RelaxingSounds/RelaxingSounds.jsx";
+import QuoteBanner from "../_components/destress/QuoteBanner/QuoteBanner.jsx";
+
 
 export default function Home() {
   return (
@@ -8,8 +14,12 @@ export default function Home() {
         title="De-Stress with Us"
         subtitle="Breath, relax, reset"
       />
-      <h1>destress</h1>
-      <p></p>
+      <Breathe />
+      <QuoteBanner bannerNumber={1} />
+      <RelaxingSounds/>
+      <QuoteBanner bannerNumber={2} />
+      <ExerciseSection/>
+      <Footer variant="De-Stress" />
     </main>
   );
 }

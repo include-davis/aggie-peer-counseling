@@ -1,14 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Jua, Cairo } from "next/font/google";
 import "./_globals/globals.scss";
 import Navbar from "./_components/common/Navbar/Navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// import localFont from 'next/font/local'
+ 
+// const myFont = localFont({
+//   src: './_fonts/JejuMyeongjo.woff2',
+// });
+ 
+const jua = Jua({
+  variable: "--font-jua",
+  weight: '400',
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const cairo = Cairo({
+  variable: "--font-cairo",
   subsets: ["latin"],
 });
 
@@ -19,10 +25,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.className}`}>
+    <html lang="en" className={`${jua.className} ${cairo.className}`}>
       <body>
         {children}
       </body>
     </html>
-  );
+  )
 }

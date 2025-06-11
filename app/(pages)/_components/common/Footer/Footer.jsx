@@ -62,27 +62,25 @@ export default function Footer({variant = "Home"}) {
     return (
         <>
             <footer className={`${styles.FooterContainer} ${footerBg}`}>
-                <div className={styles.Footer}> 
+                <div className={styles.FooterColumnsWrapper}> 
                 {/* Main footer section w/ mission & logo*/}
                     <div className={styles.FooterMain}>
                         <h1>Aggie Peer Counseling</h1>
                         <p>A by-student, for-students initiative to create a safe space for conversation, encouragement, and connection.</p>
                     </div>
-                    <div className={styles.FooterColumnsWrapper}>
-                {/* Footer section with links */}
-                {footerSections.map((section,index) => (
-                    <div key={index} className={styles.FooterColumn}>
-                        <h2><a href={section.href}>{section.heading}</a></h2>
-                        <ul className={styles.links}>
-                            {section.links.map((link,i) => (
-                                <li key={i}>
-                                    <a href={link.href}>{link.text}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div> 
-                ))}
-                    </div>
+                    {/* Footer section with links */}
+                    {footerSections.map((section,index) => (
+                        <div key={index} className={styles.FooterColumn}>
+                            <h2><a href={section.href}>{section.heading}</a></h2>
+                            <ul className={styles.links}>
+                                {section.links.map((link,i) => (
+                                    <li key={i}>
+                                        <a href={link.href}>{link.text}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div> 
+                    ))} 
                 </div>
             </footer>
 

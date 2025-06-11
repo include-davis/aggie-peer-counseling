@@ -4,6 +4,7 @@ import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import { LuMenu } from "react-icons/lu"
 import { usePathname, useRouter } from 'next/navigation';
+import clsx from 'clsx';
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -22,6 +23,11 @@ const Navbar = () => {
         }
     };
 
+    const navLinkClass = clsx(
+        styles["nav-link"],
+        pathname=="/destress" && styles.destressLinkColor,
+    );
+
 
     return (
         <>
@@ -34,16 +40,16 @@ const Navbar = () => {
                 />
 
                 <ul className={styles["nav-links"]}>
-                    <li className={styles["nav-link"]}>
+                    <li className={navLinkClass}>
                         <Link href="/">About Us</Link>
                     </li>
-                    <li className={styles["nav-link"]}>
+                    <li className={navLinkClass}>
                         <a onClick={handleClick} style={{ cursor: 'pointer' }}>Program</a>
                     </li>
-                    <li className={styles["nav-link"]}>
+                    <li className={navLinkClass}>
                         <Link href="/resources">Resources</Link>
                     </li>
-                    <li className={styles["nav-link"]}>
+                    <li className={navLinkClass}>
                         <Link href="/destress">De-stress</Link>
                     </li>
                     <li className={`${styles["nav-link"]} ${styles["nav-contact"]}`}>

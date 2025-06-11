@@ -15,8 +15,8 @@
 
 .nav-logo {
     height: 5.563rem;
-    aspect-ratio: 101.92/89.00;
-
+    width: auto;
+    
     @include sm-phone {
         height: 70px;
     }
@@ -67,6 +67,12 @@
             &:hover {
                 opacity: 0.7;    
             }
+        }
+    }
+
+    .destressLinkColor {
+        a {
+            color: white
         }
     }
 }

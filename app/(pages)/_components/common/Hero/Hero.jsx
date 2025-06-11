@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Hero.module.scss';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import Navbar from '../Navbar/Navbar';
 
 const Hero = ({ title, subtitle }) => {
   const pathname = usePathname();
@@ -18,8 +19,9 @@ const Hero = ({ title, subtitle }) => {
 
   return (
     <section className={backgroundClass}>
-      <h1 className = {styles.h1}>{title}</h1>
-      <p className = {styles.p}>{subtitle}</p>
+      <Navbar />
+      <h1 className={styles.h1}>{title}</h1>
+      <p className={styles.p}>{subtitle}</p>
     </section>
   )
 };

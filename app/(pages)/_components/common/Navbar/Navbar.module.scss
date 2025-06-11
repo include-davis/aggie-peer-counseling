@@ -15,8 +15,8 @@
 
 .nav-logo {
     height: 5.563rem;
-    aspect-ratio: 101.92/89.00;
-
+    width: auto;
+    
     @include sm-phone {
         height: 70px;
     }
@@ -69,6 +69,12 @@
             }
         }
     }
+
+    .destressLinkColor {
+        a {
+            color: white
+        }
+    }
 }
 
 /* Styles based on the route */
@@ -95,7 +101,8 @@
 
 .hamburger {
     display: none;
-    padding-right: 20px;
+    padding: 2px;
+    margin-right: 20px;
     background-color: transparent;
     border: none;
 
@@ -104,15 +111,22 @@
     }
 }
 
+.hamburgerIcon {
+    color: white;
+}
+
+.outline {
+    color: purple;
+}
+
 .mobileMenu {
     display: none;
     position: relative;
     width: 100%;
 
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    column-gap: 20px;
     
     padding-top: 5px;
     padding-bottom: 5px;

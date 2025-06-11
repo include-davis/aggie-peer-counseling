@@ -12,7 +12,7 @@ export default function Home() {
     <main className={styles.page}>
       <Hero
         title="De-Stress with Us"
-        subtitle="Breath, relax, reset"
+        subtitle="Breathe, relax, reset"
       />
       <Breathe />
       <QuoteBanner bannerNumber={1} />

@@ -12,6 +12,9 @@
 
     background-repeat: no-repeat;
     background-position: bottom center;
+    @include sm-phone {
+        height: 920px;
+    }
 }
 
  .morning {
@@ -83,7 +86,7 @@
 
 
     @include tablet {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     @include sm-phone {

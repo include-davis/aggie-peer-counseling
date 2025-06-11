@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jua.className} ${cairo.className}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.className}`}>
       <body>
         {children}
       </body>

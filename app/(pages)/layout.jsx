@@ -26,8 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jua.className} ${cairo.className}`}>
-      <body><Navbar />
-      {children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,6 +1,6 @@
 @use 'app/(pages)/_globals/mixins.scss';
 .breatheWrapper {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh; // ensure full screen
   overflow: hidden;
   background-color: #225A7F;

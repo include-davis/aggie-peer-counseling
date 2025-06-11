@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { LuMenu } from "react-icons/lu"
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
+import { CiMenuBurger } from "react-icons/ci";
+
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -58,7 +60,7 @@ const Navbar = () => {
                 </ul>
 
                 <button onClick={toggle} className={styles.hamburger}>
-                    <LuMenu size={40} color="white" />
+                    <CiMenuBurger size={40} className={clsx(styles.hamburgerIcon, isopen && styles.outline)} />
                 </button>
             </nav>
 

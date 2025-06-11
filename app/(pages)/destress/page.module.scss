@@ -1,12 +1,5 @@
 .page {
-  height: 30 rem; 
-  width: 100vw;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  h1 {
+      color: var(--gold);
+  }
 }
-

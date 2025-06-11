@@ -1,6 +1,6 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 .background {
-    width: 100vw; /* Full width of the viewport */
+    width: 100%; /* Full width of the viewport */
     height: 100vh; /* Full height of the viewport */
     background-image: url("/images/destress_relaxing_sounds/Music_Section.png");
     background-size: cover; /* Ensures the image covers the entire viewport */

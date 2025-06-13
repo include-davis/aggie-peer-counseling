@@ -20,7 +20,7 @@ export default function Home() {
       <Mission />
       <WhatWeDo />
       <Program />
-      <MeetTheMentors></MeetTheMentors>
+      <MeetTheMentors />
       <FormsSection />
       <Footer />
     </main>

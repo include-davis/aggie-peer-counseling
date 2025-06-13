@@ -44,7 +44,7 @@ export default function RelaxingSounds() {
     }, []);
 
     return (
-        <div className={styles.background}>
+        <div className={styles.background} id="relaxingsounds">
             <h1 className={styles.title}>Relaxing Sounds</h1>
             <div className={styles.musicCardContainer}>
                 <Image

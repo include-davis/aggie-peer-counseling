@@ -20,7 +20,7 @@ function Form ({ text , image , link }) {
 
 export default function FormsSection() {
     return (
-        <main className={styles.forms_section}>
+        <main className={styles.forms_section} id="forms">
             <div className={styles.wrapper}>
                 {forms.map((form, index) => (
                     <Form key={index} text={form.text} image={form.imagePath} link={form.link}/>

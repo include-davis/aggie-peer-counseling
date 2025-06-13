@@ -20,7 +20,7 @@ const mentors = [
 
 export default function Mentors() {
   return (
-    <section className={styles.mentorsSection}>
+    <section className={styles.mentorsSection} id="meetthementors">
 
       <h1 className={styles.title}>Meet The Mentors</h1>
 

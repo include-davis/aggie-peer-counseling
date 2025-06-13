@@ -4,7 +4,7 @@ import { BsChatDots } from "react-icons/bs";
 
 export default function EmergencyContact() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="emergencycontact">
       <h2 className={styles.heading}>Emergency Contact</h2>
       <div className={styles.iconRow}>
         {/* phone SOS */}

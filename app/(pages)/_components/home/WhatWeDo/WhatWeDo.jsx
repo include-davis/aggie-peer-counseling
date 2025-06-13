@@ -25,7 +25,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="whatwedo">
       <h2 className={styles.heading}>What We Do</h2>
 
       <div className={styles.grid}>

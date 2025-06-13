@@ -3,8 +3,6 @@
 
     
 .FooterContainer {
-    background-size: cover;
-    background-position: center;
     padding: 93px 77px;
     color: var(--black);
     font-family: 'Jua';
@@ -14,28 +12,22 @@
     width: 100%;
     min-height: 481px;
 
+    background-repeat: no-repeat;
+    background-size: 93% auto;
+    background-position: center calc(100% - 20px);
     &.HomeFooter {
         background-color: var(--day-mint);
-        background-image: url("/images/HomeBg.svg");
-        background-repeat: no-repeat;
-        background-size: 93% auto, cover;
-        background-position: center calc(100% - 20px);
+        background-image: url("/images/footer/HomeBg.svg");
     }
 
     &.ResourcesFooter {
         background-color: var(--sunset-peach);
-        background-image: url("/images/ResourcesBg.svg");
-        background-repeat: no-repeat;
-        background-size: 93% auto, cover;
-        background-position: center calc(100% - 20px);
+        background-image: url("/images/footer/ResourcesBg.svg");
     }
 
     &.DeStressFooter {
         background-color: var(--night-fog);
-        background-image: url("/images/DeStressBg.svg");
-        background-repeat: no-repeat;
-        background-size: 93% auto, cover;
-        background-position: center calc(100% - 20px);
+        background-image: url("/images/footer/DeStressBg.svg");    
     }
 }
 
@@ -181,14 +173,18 @@
     }
 
     .FooterContainer {
+        background-position: center;
+        background-size: calc(100% - 40px) calc(100% - 40px);
+        min-height: 253px;
+
         &.HomeFooter {
-            background-image: url("/images/mobile_footer.svg");
+            background-image: url("/images/footer/grass.svg");
         }
         &.ResourcesFooter {
-            background-image: url("/images/mobile_footer.svg");
+            background-image: url("/images/footer/grass.svg");
         }
         &.DeStressFooter {
-            background-image: url("/images/mobile_footer.svg");
+            background-image: url("/images/footer/destress_grass.svg");
         }
     }
 }

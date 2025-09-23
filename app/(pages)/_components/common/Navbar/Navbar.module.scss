@@ -1,7 +1,7 @@
  // Import global styles
  
 .navbar {
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 1000;
     padding: 0.5rem 1rem;
@@ -47,7 +47,7 @@
     gap: 2rem;
     list-style: none;
 
-    @include tablet {
+    @include phone {
         display: none;
     }
 
@@ -101,12 +101,14 @@
 
 .hamburger {
     display: none;
-    padding: 2px;
+    //padding: 10px;
     margin-right: 20px;
     background-color: transparent;
     border: none;
+    //border-radius: 10px;
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    @include tablet {
+    @include phone {
         display: block;
     }
 }
@@ -116,12 +118,13 @@
 }
 
 .outline {
-    color: purple;
+    color: gray;
 }
 
 .mobileMenu {
     display: none;
-    position: relative;
+    position: absolute;
+    top: 100px;
     width: 100%;
 
     flex-direction: row;
@@ -135,7 +138,7 @@
     overflow: hidden;
     transition: height 0.4s ease, opacity 0.3s ease;
 
-    @include tablet {
+    @include phone {
         display: flex;
     }
 }
@@ -153,6 +156,7 @@
 .menuLink {
     text-decoration: none;
     font-family: 'Jua';
+    font-size: 1rem;
     text-align: center;
     color: black;
 }

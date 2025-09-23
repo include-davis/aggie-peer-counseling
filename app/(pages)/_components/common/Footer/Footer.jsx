@@ -77,8 +77,13 @@ export default function Footer({variant = "Home"}) {
     }
     // Rendering the footer component 
     return (
-        <>
+        <div className={`${styles.Footer} ${footerBg}`}>
             <footer className={`${styles.FooterContainer} ${footerBg}`}>
+                <img 
+                    src="/images/footer/cows.svg" 
+                    alt="Logo" 
+                    className={styles.mobileLogo} 
+                />
                 <div className={styles.FooterColumnsWrapper}> 
                 {/* Main footer section w/ mission & logo*/}
                     <div className={styles.FooterMain}>
@@ -87,7 +92,7 @@ export default function Footer({variant = "Home"}) {
                     </div>
                     {/* Footer section with links */}
                     {footerSections.map((section,index) => (
-                        <div key={index} className={styles.FooterColumn}>
+                        <div key={index} className={`${styles.FooterColumn} ${footerBg}`}>
                             <h2><a href={section.href}>{section.heading}</a></h2>
                             <ul className={styles.links}>
                                 {section.links.map((link,i) => (
@@ -102,13 +107,13 @@ export default function Footer({variant = "Home"}) {
             </footer>
 
             {/* Footer's Footer */}
-            <div className={styles.FooterBottom}>
+            <div className={`${styles.FooterBottom} ${footerBg}`}>
                 <p><FaRegCopyright/> 2025 Aggie Peer Counselling</p>
                 <div className={styles.FooterIcons}>
                     <a href='#'> <IoMail/></a>
                     <a href='#' target="_blank" rel='noopener noreferrer'> <BiLogoInstagramAlt/></a>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

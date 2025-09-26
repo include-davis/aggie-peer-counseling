@@ -50,7 +50,7 @@ export default function MusicCard({ imagePath, altText }) {
     };
 
     return (
-        <div className={styles.cardContainer}>
+        <div>
             <div className={styles.card}>
                 <div className={styles.imageContainer}>
                     <Image 

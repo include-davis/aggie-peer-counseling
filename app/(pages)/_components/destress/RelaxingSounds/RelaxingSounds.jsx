@@ -22,7 +22,6 @@ export default function RelaxingSounds() {
     const scrollNext = () => {
         if (containerRef.current) {
             const container = containerRef.current;
-            const cardWidth = container.firstChild.offsetWidth;
             const scrollAmount = container.clientWidth; // Scroll 3 cards at a time (including gaps)
             container.scrollBy({ left: scrollAmount, behavior: "smooth" });
             setTimeout(checkScrollPosition, 500);
@@ -32,7 +31,6 @@ export default function RelaxingSounds() {
     const scrollPrev = () => {
         if (containerRef.current) {
             const container = containerRef.current;
-            const cardWidth = container.firstChild.offsetWidth;
             const scrollAmount = container.clientWidth; // Scroll 3 cards at a time (including gaps)
             container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
             setTimeout(checkScrollPosition, 500);
@@ -50,8 +48,8 @@ export default function RelaxingSounds() {
                 <Image
                     src="/images/destress_relaxing_sounds/leftScroll.svg"
                     alt="Scroll Left"
-                    width={54}
-                    height={54}
+                    width={20}
+                    height={32}
                     className={`${styles.scrollButtons} ${isAtStart ? styles.hidden : ''}`}
                     onClick={scrollPrev}
                 />
@@ -70,8 +68,8 @@ export default function RelaxingSounds() {
                 <Image
                     src="/images/destress_relaxing_sounds/rightScroll.svg"
                     alt="Scroll Right"
-                    width={54}
-                    height={54}
+                    width={20}
+                    height={32}
                     className={`${styles.scrollButtons} ${isAtEnd ? styles.hidden : ''}`}
                     onClick={scrollNext}
                 />

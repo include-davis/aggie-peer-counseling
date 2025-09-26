@@ -1,12 +1,8 @@
-.cardContainer {
-    position: relative;
-    width: 17.5625rem; /* 281px / 16 = 17.5625rem */
-    height: 24.1875rem; /* 387px / 16 = 24.1875rem */
-}
 
 .card {
-    width: 120.43%;
-    height: 100%;
+    position: relative;
+    width: 281px;
+    aspect-ratio: 0.72;
     background: #F4DA9D;
     border: 0.0625rem solid #8D4D13; /* 1px */
     border-radius: 1.25rem; /* 20px */

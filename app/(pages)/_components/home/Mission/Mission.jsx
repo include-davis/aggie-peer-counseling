@@ -2,7 +2,7 @@ import styles from "./Mission.module.scss"
 
 export default function Mission() {
     return (
-        <section className={styles.MissionSection}>
+        <section className={styles.MissionSection} id="ourmission">
             <div className={styles.MissionContent}>
                 <img 
                     src="/images/LogoMissionMobile.svg"

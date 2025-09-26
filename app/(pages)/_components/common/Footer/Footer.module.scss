@@ -1,50 +1,50 @@
 @use "../../../_globals/mixins.scss";
 
+.Footer {
+    &.HomeFooter {
+        background-color: var(--day-mint);
+    }
 
+    &.ResourcesFooter {
+        background-color: var(--sunset-peach);
+    }
+
+    &.DeStressFooter {
+        background-color: var(--night-fog);
+    }
+}
     
 .FooterContainer {
-    background-size: cover;
-    background-position: center;
-    padding: 40px 20px;
+    padding: 93px 77px;
     color: var(--black);
     font-family: 'Jua';
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 481px;
+    min-height: 481px;
 
+    background-repeat: no-repeat;
+    background-size: 93% auto;
+    background-position: center calc(100% - 20px);
     &.HomeFooter {
-        background-color: var(--day-mint);
-        background-image: url("/images/HomeBg.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom center;
+        background-image: url("/images/footer/HomeBg.svg");
     }
 
     &.ResourcesFooter {
-        background-color: var(--sunset-peach);
-        background-image: url("/images/ResourcesBg.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom center;
+        background-image: url("/images/footer/ResourcesBg.svg");
     }
 
     &.DeStressFooter {
-        background-color: var(--night-fog);
-        background-image: url("/images/DeStressBg.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom center;
+        color: var(--white);
+        background-image: url("/images/footer/DeStressBg.svg");    
     }
 }
 
-.Footer {
+.FooterColumnsWrapper {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: space-between;
     column-gap: 40px;
 }
 
@@ -55,31 +55,16 @@
     flex-direction: column;
 
     h1 {
-        font-size: 2.125rem;
+        font-size: min(2vw, 34px);
         font-weight: 400;
-        margin-bottom: 10px;
+        margin-bottom: 26px;
         font-family: 'Jua';
     }
 
     p {
         font-size: 14px;
-        margin-bottom: 20px;
     }
 
-    img {
-        width: 120px;
-        height: auto;
-        margin-top: 10px;
-    }
-
-}
-
-.FooterColumnsWrapper {
-    flex: 1;
-    max-width: 700px;
-    display: flex;
-    justify-content: space-between;
-    column-gap: 50px;
 }
 
 .FooterColumn {
@@ -88,10 +73,9 @@
     flex-direction: column;
 
     h2 {
-        font-size: 24px;
-        font-weight: bold;
+        font-size: min(2vw, 34px);
+        font-weight: 400;
         margin-bottom: 12px;
-        
     }
 
     ul {
@@ -101,7 +85,7 @@
     }
 
     li {
-        margin-bottom: 8px;
+        margin-top: 26px;
         font-size: 14px;
     }
     
@@ -114,6 +98,11 @@
         }
     }
 
+    &.DeStressFooter {
+        a {
+            color: var(--white);
+        }
+    }
 }
 
 
@@ -144,27 +133,38 @@
     }
 }
 
-
-.FooterLogo {
-    width: 120px;
-    height: auto;
+.mobileLogo {
+    width: 154px;
+    height: 116px;
+    align-self: center;
+    display: none;
 }
-
 
 
 @include mixins.tablet {
     .Footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        &.HomeFooter {
+            background-image: url("/images/footer/mobileHomeBg.svg");
+        }
+
+        &.ResourcesFooter {
+            background-image: url("/images/footer/mobileResourcesBg.svg");
+        }
+
+        &.DeStressFooter {
+            background-image: url("/images/footer/mobileDeStressBg.svg");
+        }
     }
 
     .FooterMain {
         align-items: center;
         text-align: center;
 
-        h {
-            font-size: 1rem;
+        h1 {
+            font-size: 1.5rem;
         }
 
         p {
@@ -175,18 +175,26 @@
     .FooterColumnsWrapper {
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 10px;
     }
 
     .FooterColumn {
         align-items: center;
         text-align: center;
+        h2 {
+            font-size: 1.3rem;
+        }
     }
 
     .FooterBottom {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 10px;
         text-align: center;
+        background-color: transparent;
+
+        &.DeStressFooter {
+            color: var(--white);
+        }
     }
 
     .FooterIcons {
@@ -198,15 +206,23 @@
     }
 
     .FooterContainer {
-        padding-top: 120px;
+        min-height: 0;
+        padding: 20px 0px;
         &.HomeFooter {
-            background-image: url("/images/mobile_footer.svg");
+            background-image: none;
         }
+
         &.ResourcesFooter {
-            background-image: url("/images/mobile_footer.svg");
+            background-image: none;
         }
+
         &.DeStressFooter {
-            background-image: url("/images/mobile_footer.svg");
+            background-image: none;    
         }
     }
+
+    .mobileLogo {
+        display: inline;
+    }
 }
+

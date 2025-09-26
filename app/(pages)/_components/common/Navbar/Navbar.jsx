@@ -2,10 +2,9 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
-import { LuMenu } from "react-icons/lu"
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
-import { CiMenuBurger } from "react-icons/ci";
+import { IoMenu } from 'react-icons/io5';
 
 
 const Navbar = () => {
@@ -60,7 +59,7 @@ const Navbar = () => {
                 </ul>
 
                 <button onClick={toggle} className={styles.hamburger}>
-                    <CiMenuBurger size={40} className={clsx(styles.hamburgerIcon, isopen && styles.outline)} />
+                    <IoMenu size={50} className={clsx(styles.hamburgerIcon, isopen && styles.outline)} />
                 </button>
             </nav>
 

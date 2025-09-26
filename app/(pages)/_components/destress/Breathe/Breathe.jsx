@@ -16,7 +16,7 @@ export default function Breathe() {
   }, []);
 
   return (
-    <div className={styles.breatheWrapper}>
+    <div className={styles.breatheWrapper} id="breathe">
       <div className={styles.circleContainer}>
         <div className={styles.outerCircle}></div>
         <div

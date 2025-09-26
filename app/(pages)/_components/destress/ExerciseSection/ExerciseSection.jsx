@@ -88,7 +88,7 @@ export default function ExerciseSection() {
   };
 
   return (
-    <div className={styles.pageContainer}>
+    <div className={styles.pageContainer} id="exercisesection">
       <div className={styles.container}>
         <h1 className={styles.title}>Check out these Exercises!</h1>
         <div className={styles.scrollableContainer}>
